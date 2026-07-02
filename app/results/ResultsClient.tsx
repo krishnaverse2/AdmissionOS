@@ -18,7 +18,36 @@ interface FilterState {
   chance: ChanceLevel | "any";
 }
 
-const MUMBAI_REGION = ["mumbai", "navi-mumbai", "kharghar-navi-mumbai"];
+const CITY_REGIONS: Record<string, string[]> = {
+  pune: [
+    "pune",
+    "pimpri",
+    "chinchwad",
+    "pimpri chinchwad",
+    "akurdi",
+    "ravet",
+    "tathawade",
+    "hinjawadi",
+    "wagholi",
+    "hadapsar",
+    "narhe",
+    "karvenagar",
+    "alandi",
+    "talegaon",
+  ],
+  mumbai: [
+    "mumbai",
+    "navi mumbai",
+    "navi-mumbai",
+    "kharghar",
+    "thane",
+    "panvel",
+    "kalyan",
+    "dombivli",
+    "vasai",
+    "virar",
+  ],
+};
 
 export default function ResultsClient() {
   const [input] = useState<PredictionInput | null>(() => {
@@ -60,19 +89,27 @@ export default function ResultsClient() {
 
     return results.filter((r) => {
       if (filters.city !== "any") {
-        if (filters.city === "mumbai") {
-          if (
-            !MUMBAI_REGION.includes(r.cityId) &&
-            !r.collegeName.toLowerCase().includes("mumbai")
-          ) {
-            return false;
-          }
-        } else if (r.cityId !== filters.city) {
-          return false;
+        const selectedCity = filters.city.toLowerCase().replaceAll("-", " ");
+        const regionCities = CITY_REGIONS[selectedCity];
+
+        const collegeText = `${r.cityId} ${(r as any).cityName ?? ""} ${r.collegeName}`
+          .toLowerCase()
+          .replaceAll("-", " ");
+
+        if (regionCities) {
+          const matchesRegion = regionCities.some((city) =>
+            collegeText.includes(city.toLowerCase().replaceAll("-", " "))
+          );
+
+          if (!matchesRegion) return false;
+        } else {
+          if (!collegeText.includes(selectedCity)) return false;
         }
       }
 
-      if (filters.branch !== "any" && r.branchId !== filters.branch) return false;
+      if (filters.branch !== "any" && r.branchId !== filters.branch) {
+        return false;
+      }
 
       if (
         filters.collegeType !== "Any" &&
@@ -81,7 +118,9 @@ export default function ResultsClient() {
         return false;
       }
 
-      if (filters.chance !== "any" && r.chance !== filters.chance) return false;
+      if (filters.chance !== "any" && r.chance !== filters.chance) {
+        return false;
+      }
 
       return true;
     });
@@ -93,6 +132,7 @@ export default function ResultsClient() {
         if (prev.length >= 3) return prev;
         return [...prev, id];
       }
+
       return prev.filter((x) => x !== id);
     });
   }
@@ -105,6 +145,7 @@ export default function ResultsClient() {
           <p className="mt-2 text-sm text-slate-500">
             Fill the predictor form first.
           </p>
+
           <Link
             href="/"
             className="mt-5 inline-flex rounded-2xl bg-teal-600 px-5 py-3 text-sm font-black text-white"
@@ -121,7 +162,11 @@ export default function ResultsClient() {
       <div className="px-5 py-14 text-center">
         <div className="rounded-[2rem] bg-white p-8 shadow-xl">
           <p className="text-sm font-bold text-red-500">{error}</p>
-          <Link href="/" className="mt-4 inline-block text-sm font-bold text-teal-700">
+
+          <Link
+            href="/"
+            className="mt-4 inline-block text-sm font-bold text-teal-700"
+          >
             Back to predictor
           </Link>
         </div>
@@ -131,7 +176,7 @@ export default function ResultsClient() {
 
   return (
     <div className="space-y-5 px-4 py-5">
-      <section className="-mt-10 rounded-[2rem] bg-white p-5 shadow-xl shadow-teal-950/10">
+      <section className="rounded-[2rem] bg-white p-5 shadow-xl shadow-teal-950/10">
         <p className="text-xs font-black uppercase tracking-[0.22em] text-teal-600">
           Prediction Summary
         </p>
@@ -225,6 +270,7 @@ export default function ResultsClient() {
           <div className="w-full max-w-[430px] rounded-t-[2rem] bg-white p-5 shadow-2xl">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-xl font-black text-slate-950">Filters</h2>
+
               <button
                 onClick={() => setShowFilters(false)}
                 className="rounded-full bg-slate-100 px-3 py-1 text-sm font-black text-slate-600"
@@ -238,6 +284,7 @@ export default function ResultsClient() {
                 <span className="mb-2 block text-sm font-black text-slate-700">
                   City
                 </span>
+
                 <CityInput
                   value={filters.city}
                   onChange={(v) => setFilters((f) => ({ ...f, city: v }))}
@@ -342,6 +389,7 @@ function FilterSelect({
       <span className="mb-2 block text-sm font-black text-slate-700">
         {label}
       </span>
+
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
