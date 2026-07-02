@@ -8,7 +8,11 @@ import { saveLastPrediction } from "@/lib/clientStore";
 import CityInput from "@/components/CityInput";
 import type { PredictionInput, CollegeType } from "@/lib/types";
 
-export default function PredictorForm() {
+export default function PredictorForm({
+  onPredicted,
+}: {
+  onPredicted?: () => void;
+}) {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
 
@@ -29,13 +33,20 @@ export default function PredictorForm() {
     setForm((f) => ({ ...f, [key]: value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitting(true);
-    saveLastPrediction(form);
-    sessionStorage.setItem("cgai_predict_input", JSON.stringify(form));
-    router.push("/results");
+ function handleSubmit(e: React.FormEvent) {
+  e.preventDefault();
+  setSubmitting(true);
+
+  saveLastPrediction(form);
+  sessionStorage.setItem("cgai_predict_input", JSON.stringify(form));
+
+  if (onPredicted) {
+    onPredicted();
+    return;
   }
+
+  router.push("/results");
+}
 
   return (
     <form onSubmit={handleSubmit} className="rounded-[2rem] bg-white p-4 shadow-xl shadow-teal-950/10">

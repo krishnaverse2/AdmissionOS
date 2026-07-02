@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
 import BottomNavigation from "@/components/BottomNavigation";
 
 export const metadata: Metadata = {
@@ -29,8 +28,10 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-[#E6F3F1] text-ink">
         <div className="mx-auto flex min-h-screen w-full max-w-[430px] flex-col bg-[#F8FAFC] shadow-2xl shadow-teal-950/10 sm:border-x sm:border-teal-950/10">
-          <Header />
-          <main className="flex-1 pb-24">{children}</main>
+          <main className="flex-1 pb-24">
+            {children}
+          </main>
+
           <BottomNavigation />
         </div>
       </body>
