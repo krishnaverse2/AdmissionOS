@@ -2,38 +2,74 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {
+  Home,
+  BarChart3,
+  Bot,
+  Heart,
+} from "lucide-react";
 
-const items = [
-  { href: "/", label: "Home", icon: "🏠" },
-  { href: "/colleges", label: "Colleges", icon: "🏛️" },
-  { href: "/compare", label: "Compare", icon: "📊" },
-  { href: "/counselor", label: "AI", icon: "🤖" },
-  { href: "/saved", label: "Saved", icon: "❤️" },
+const tabs = [
+  {
+    href: "/",
+    label: "Home",
+    icon: Home,
+  },
+  {
+    href: "/compare",
+    label: "Compare",
+    icon: BarChart3,
+  },
+  {
+    href: "/counselor",
+    label: "AI",
+    icon: Bot,
+  },
+  {
+    href: "/saved",
+    label: "Saved",
+    icon: Heart,
+  },
 ];
 
 export default function BottomNavigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-1/2 z-50 w-full max-w-[430px] -translate-x-1/2 border-t border-teal-950/10 bg-white/95 px-3 pb-4 pt-2 shadow-2xl backdrop-blur-xl">
-      <div className="grid grid-cols-5 gap-1">
-        {items.map((item) => {
+    <nav className="fixed bottom-0 left-1/2 z-50 w-full max-w-[430px] -translate-x-1/2 border-t border-gray-200 bg-white shadow-[0_-6px_20px_rgba(0,0,0,0.08)]">
+      <div className="grid grid-cols-4 py-2">
+        {tabs.map((tab) => {
           const active =
-            pathname === item.href ||
-            (item.href !== "/" && pathname.startsWith(item.href));
+            pathname === tab.href ||
+            (tab.href !== "/" && pathname.startsWith(tab.href));
+
+          const Icon = tab.icon;
 
           return (
             <Link
-              key={item.href}
-              href={item.href}
-              className={`flex flex-col items-center justify-center rounded-2xl px-2 py-2 text-[11px] font-bold transition ${
-                active
-                  ? "bg-teal-50 text-teal-700"
-                  : "text-slate-400 hover:text-teal-700"
-              }`}
+              key={tab.href}
+              href={tab.href}
+              className="flex flex-col items-center justify-center py-1"
             >
-              <span className="text-lg">{item.icon}</span>
-              <span className="mt-0.5">{item.label}</span>
+              <Icon
+                size={28}
+                strokeWidth={2.3}
+                className={`transition-all duration-200 ${
+                  active
+                    ? "text-teal-600 scale-110"
+                    : "text-gray-400"
+                }`}
+              />
+
+              <span
+                className={`mt-1 text-[13px] transition-all ${
+                  active
+                    ? "font-bold text-teal-600"
+                    : "font-medium text-gray-500"
+                }`}
+              >
+                {tab.label}
+              </span>
             </Link>
           );
         })}
