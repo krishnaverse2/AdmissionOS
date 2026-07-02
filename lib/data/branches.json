@@ -1,0 +1,506 @@
+[
+  {
+    "id": "civil-engineering",
+    "name": "Civil Engineering",
+    "code": "100219110",
+    "demandTier": "low"
+  },
+  {
+    "id": "computer-science-and-engineering",
+    "name": "Computer Science and Engineering",
+    "code": "100224210",
+    "demandTier": "high"
+  },
+  {
+    "id": "information-technology",
+    "name": "Information Technology",
+    "code": "100224610",
+    "demandTier": "high"
+  },
+  {
+    "id": "electrical-engineering",
+    "name": "Electrical Engineering",
+    "code": "100229310",
+    "demandTier": "low"
+  },
+  {
+    "id": "electronics-and-telecommunication-engg",
+    "name": "Electronics and Telecommunication Engg",
+    "code": "100237210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "instrumentation-engineering",
+    "name": "Instrumentation Engineering",
+    "code": "100246610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "mechanical-engineering",
+    "name": "Mechanical Engineering",
+    "code": "100261210",
+    "demandTier": "low"
+  },
+  {
+    "id": "food-technology",
+    "name": "Food Technology",
+    "code": "100550310",
+    "demandTier": "medium"
+  },
+  {
+    "id": "oil-and-paints-technology",
+    "name": "Oil and Paints Technology",
+    "code": "100551710",
+    "demandTier": "medium"
+  },
+  {
+    "id": "petro-chemical-engineering",
+    "name": "Petro Chemical Engineering",
+    "code": "100552710",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-engineering",
+    "name": "Computer Engineering",
+    "code": "101224510",
+    "demandTier": "high"
+  },
+  {
+    "id": "electrical-engg-electronics-and-power",
+    "name": "Electrical Engg[Electronics and Power]",
+    "code": "110135610",
+    "demandTier": "low"
+  },
+  {
+    "id": "artificial-intelligence-ai-and-data-science",
+    "name": "Artificial Intelligence (AI) and Data Science",
+    "code": "110526310",
+    "demandTier": "high"
+  },
+  {
+    "id": "computer-science-and-engineering-iot",
+    "name": "Computer Science and Engineering (IoT)",
+    "code": "110526710",
+    "demandTier": "high"
+  },
+  {
+    "id": "computer-science-and-engineering-artificial-intelligence-and-machine-learning",
+    "name": "Computer Science and Engineering(Artificial Intelligence and Machine Learning)",
+    "code": "110791110",
+    "demandTier": "high"
+  },
+  {
+    "id": "artificial-intelligence-and-data-science",
+    "name": "Artificial Intelligence and Data Science",
+    "code": "110799510",
+    "demandTier": "high"
+  },
+  {
+    "id": "chemical-engineering",
+    "name": "Chemical Engineering",
+    "code": "111650710",
+    "demandTier": "medium"
+  },
+  {
+    "id": "textile-engineering-technology",
+    "name": "Textile Engineering / Technology",
+    "code": "112089310",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-engineering-data-science",
+    "name": "Computer Science and Engineering(Data Science)",
+    "code": "112891210",
+    "demandTier": "high"
+  },
+  {
+    "id": "production-engineering",
+    "name": "Production Engineering",
+    "code": "202060610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "textile-technology",
+    "name": "Textile Technology",
+    "code": "202089610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "pharmaceutical-and-fine-chemical-technology",
+    "name": "Pharmaceutical and Fine Chemical Technology",
+    "code": "202181610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "artificial-intelligence-and-machine-learning",
+    "name": "Artificial Intelligence and Machine Learning",
+    "code": "211192110",
+    "demandTier": "high"
+  },
+  {
+    "id": "electronics-and-computer-engineering",
+    "name": "Electronics and Computer Engineering",
+    "code": "211284410",
+    "demandTier": "high"
+  },
+  {
+    "id": "vlsi",
+    "name": "VLSI",
+    "code": "211292910",
+    "demandTier": "medium"
+  },
+  {
+    "id": "5g",
+    "name": "5G",
+    "code": "211293210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "agricultural-engineering",
+    "name": "Agricultural Engineering",
+    "code": "211301110",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-design",
+    "name": "Computer Science and Design",
+    "code": "211325710",
+    "demandTier": "high"
+  },
+  {
+    "id": "plastic-and-polymer-engineering",
+    "name": "Plastic and Polymer Engineering",
+    "code": "211350110",
+    "demandTier": "medium"
+  },
+  {
+    "id": "mechatronics-engineering",
+    "name": "Mechatronics Engineering",
+    "code": "211362410",
+    "demandTier": "medium"
+  },
+  {
+    "id": "mechanical-and-automation-engineering",
+    "name": "Mechanical & Automation Engineering",
+    "code": "211661510",
+    "demandTier": "low"
+  },
+  {
+    "id": "automation-and-robotics",
+    "name": "Automation and Robotics",
+    "code": "212791610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "architectural-assistantship",
+    "name": "Architectural Assistantship",
+    "code": "212946310",
+    "demandTier": "medium"
+  },
+  {
+    "id": "electronics-engineering-vlsi-design-and-technology",
+    "name": "Electronics Engineering ( VLSI Design and Technology)",
+    "code": "213437810",
+    "demandTier": "medium"
+  },
+  {
+    "id": "electrical-and-electronics-engineering",
+    "name": "Electrical and Electronics Engineering",
+    "code": "213729710",
+    "demandTier": "low"
+  },
+  {
+    "id": "electronics-and-computer-science",
+    "name": "Electronics and Computer Science",
+    "code": "228290010",
+    "demandTier": "high"
+  },
+  {
+    "id": "safety-and-fire-engineering",
+    "name": "Safety and Fire Engineering",
+    "code": "250891410",
+    "demandTier": "medium"
+  },
+  {
+    "id": "electronics-and-communication-advanced-communication-technology",
+    "name": "Electronics and Communication(Advanced Communication Technology)",
+    "code": "253392810",
+    "demandTier": "medium"
+  },
+  {
+    "id": "artificial-intelligence",
+    "name": "Artificial Intelligence",
+    "code": "263799710",
+    "demandTier": "high"
+  },
+  {
+    "id": "computer-science",
+    "name": "Computer Science",
+    "code": "266656610",
+    "demandTier": "high"
+  },
+  {
+    "id": "electronics-engineering",
+    "name": "Electronics Engineering",
+    "code": "301237610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "production-engineering-sandwich",
+    "name": "Production Engineering[Sandwich]",
+    "code": "301262610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "food-technology-and-management",
+    "name": "Food Technology And Management",
+    "code": "304250410",
+    "demandTier": "medium"
+  },
+  {
+    "id": "civil-and-infrastructure-engineering",
+    "name": "Civil and infrastructure Engineering",
+    "code": "304291810",
+    "demandTier": "low"
+  },
+  {
+    "id": "bio-medical-engineering",
+    "name": "Bio Medical Engineering",
+    "code": "313946110",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-engineering-internet-of-things-and-cyber-security-including-block-chain-technology",
+    "name": "Computer Science and Engineering (Internet of Things and Cyber Security Including Block Chain Technology)",
+    "code": "314692010",
+    "demandTier": "high"
+  },
+  {
+    "id": "data-science",
+    "name": "Data Science",
+    "code": "314791710",
+    "demandTier": "high"
+  },
+  {
+    "id": "cyber-security",
+    "name": "Cyber Security",
+    "code": "314825210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "automobile-engineering",
+    "name": "Automobile Engineering",
+    "code": "315460210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "internet-of-things-iot",
+    "name": "Internet of Things (IoT)",
+    "code": "317625310",
+    "demandTier": "high"
+  },
+  {
+    "id": "mechanical-and-mechatronics-engineering-additive-manufacturing",
+    "name": "Mechanical and Mechatronics Engineering (Additive Manufacturing)",
+    "code": "317625910",
+    "demandTier": "low"
+  },
+  {
+    "id": "computer-science-and-engineering-cyber-security",
+    "name": "Computer Science and Engineering(Cyber Security)",
+    "code": "317691010",
+    "demandTier": "high"
+  },
+  {
+    "id": "mechanical-engineering-automobile",
+    "name": "Mechanical Engineering Automobile",
+    "code": "318361610",
+    "demandTier": "low"
+  },
+  {
+    "id": "electrical-and-computer-engineering",
+    "name": "Electrical and Computer Engineering",
+    "code": "322192610",
+    "demandTier": "high"
+  },
+  {
+    "id": "civil-engineering-and-planning",
+    "name": "Civil Engineering and Planning",
+    "code": "327793410",
+    "demandTier": "low"
+  },
+  {
+    "id": "electronics-and-biomedical-engineering",
+    "name": "Electronics and BiomedicalÂ Engineering",
+    "code": "327793510",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-information-technology",
+    "name": "Computer Science and Information Technology",
+    "code": "335156810",
+    "demandTier": "high"
+  },
+  {
+    "id": "data-engineering",
+    "name": "Data Engineering",
+    "code": "346092410",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-technology",
+    "name": "Computer Technology",
+    "code": "410425110",
+    "demandTier": "high"
+  },
+  {
+    "id": "electronics-and-communication-engineering",
+    "name": "Electronics and Communication Engineering",
+    "code": "410437010",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-engineering-artificial-intelligence",
+    "name": "Computer Science and Engineering (Artificial Intelligence)",
+    "code": "411691310",
+    "demandTier": "high"
+  },
+  {
+    "id": "aeronautical-engineering",
+    "name": "Aeronautical Engineering",
+    "code": "412300210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "bio-technology",
+    "name": "Bio Technology",
+    "code": "412308210",
+    "demandTier": "medium"
+  },
+  {
+    "id": "industrial-iot",
+    "name": "Industrial IoT",
+    "code": "412326510",
+    "demandTier": "high"
+  },
+  {
+    "id": "robotics-and-artificial-intelligence",
+    "name": "Robotics and Artificial Intelligence",
+    "code": "412326610",
+    "demandTier": "high"
+  },
+  {
+    "id": "mining-engineering",
+    "name": "Mining Engineering",
+    "code": "416370110",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-business-systems",
+    "name": "Computer Science and Business Systems",
+    "code": "417426210",
+    "demandTier": "high"
+  },
+  {
+    "id": "plastic-technology",
+    "name": "Plastic Technology",
+    "code": "500350810",
+    "demandTier": "medium"
+  },
+  {
+    "id": "oil-fats-and-waxes-technology",
+    "name": "Oil Fats and Waxes Technology",
+    "code": "500351810",
+    "demandTier": "medium"
+  },
+  {
+    "id": "paints-technology",
+    "name": "Paints Technology",
+    "code": "500352310",
+    "demandTier": "medium"
+  },
+  {
+    "id": "instrumentation-and-control-engineering",
+    "name": "Instrumentation and Control Engineering",
+    "code": "510846410",
+    "demandTier": "medium"
+  },
+  {
+    "id": "robotics-and-automation",
+    "name": "Robotics and Automation",
+    "code": "512121910",
+    "demandTier": "medium"
+  },
+  {
+    "id": "structural-engineering",
+    "name": "Structural Engineering",
+    "code": "516091510",
+    "demandTier": "medium"
+  },
+  {
+    "id": "civil-and-environmental-engineering",
+    "name": "Civil and Environmental Engineering",
+    "code": "524492210",
+    "demandTier": "low"
+  },
+  {
+    "id": "computer-science-and-technology",
+    "name": "Computer Science and Technology",
+    "code": "602825410",
+    "demandTier": "high"
+  },
+  {
+    "id": "computer-engineering-software-engineering",
+    "name": "Computer Engineering (Software Engineering)",
+    "code": "614692710",
+    "demandTier": "high"
+  },
+  {
+    "id": "technical-textiles",
+    "name": "Technical Textiles",
+    "code": "622246510",
+    "demandTier": "medium"
+  },
+  {
+    "id": "fashion-technology",
+    "name": "Fashion Technology",
+    "code": "622257010",
+    "demandTier": "medium"
+  },
+  {
+    "id": "man-made-textile-technology",
+    "name": "Man Made Textile Technology",
+    "code": "622288610",
+    "demandTier": "medium"
+  },
+  {
+    "id": "textile-chemistry",
+    "name": "Textile Chemistry",
+    "code": "622289010",
+    "demandTier": "medium"
+  },
+  {
+    "id": "computer-science-and-engineering-artificial-intelligence-and-data-science",
+    "name": "Computer Science and Engineering (Artificial Intelligence and Data Science)",
+    "code": "626992510",
+    "demandTier": "high"
+  },
+  {
+    "id": "printing-and-packing-technology",
+    "name": "Printing and Packing Technology",
+    "code": "627484110",
+    "demandTier": "medium"
+  },
+  {
+    "id": "mechanical-engineering-sandwich",
+    "name": "Mechanical Engineering[Sandwich]",
+    "code": "627862510",
+    "demandTier": "low"
+  },
+  {
+    "id": "electrical-electronics-and-power",
+    "name": "Electrical, Electronics and Power",
+    "code": "640257310",
+    "demandTier": "low"
+  }
+]

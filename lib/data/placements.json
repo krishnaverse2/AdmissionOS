@@ -1,0 +1,2946 @@
+[
+  {
+    "id": 1,
+    "college_id": "vit-pune",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 6.8,
+    "highest_package": 18.4,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 2,
+    "college_id": "vit-pune",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 6.8,
+    "highest_package": 18.4,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 3,
+    "college_id": "vit-pune",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 6.8,
+    "highest_package": 18.4,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 4,
+    "college_id": "vit-pune",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 6.8,
+    "highest_package": 18.4,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 5,
+    "college_id": "vit-pune",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 5.5,
+    "highest_package": 14.9,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 6,
+    "college_id": "vit-pune",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 4.4,
+    "highest_package": 11.9,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 7,
+    "college_id": "vit-pune",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 4.4,
+    "highest_package": 11.9,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 8,
+    "college_id": "vit-pune",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 5.5,
+    "highest_package": 14.9,
+    "placement_percentage": 85,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 9,
+    "college_id": "pccoe-pune",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 6,
+    "highest_package": 15.3,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 10,
+    "college_id": "pccoe-pune",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 6,
+    "highest_package": 15.3,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 11,
+    "college_id": "pccoe-pune",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 6,
+    "highest_package": 15.3,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 12,
+    "college_id": "pccoe-pune",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 6,
+    "highest_package": 15.3,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 13,
+    "college_id": "pccoe-pune",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 12.2,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 14,
+    "college_id": "pccoe-pune",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.8,
+    "highest_package": 9.7,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 15,
+    "college_id": "pccoe-pune",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.8,
+    "highest_package": 9.7,
+    "placement_percentage": 75,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 16,
+    "college_id": "pict-pune",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 7.7,
+    "highest_package": 21.9,
+    "placement_percentage": 94,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 17,
+    "college_id": "pict-pune",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 7.7,
+    "highest_package": 21.9,
+    "placement_percentage": 94,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 18,
+    "college_id": "pict-pune",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 6.1,
+    "highest_package": 17.4,
+    "placement_percentage": 94,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 19,
+    "college_id": "pict-pune",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 6.1,
+    "highest_package": 17.4,
+    "placement_percentage": 94,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 20,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 21,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 22,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 23,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 24,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 25,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 26,
+    "college_id": "aissms-coe-pune",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 27,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 28,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 29,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 30,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 31,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.9,
+    "highest_package": 9.2,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 32,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.1,
+    "highest_package": 7.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 33,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.1,
+    "highest_package": 7.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 34,
+    "college_id": "dy-patil-akurdi",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 3.9,
+    "highest_package": 9.2,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 35,
+    "college_id": "jspm-tathawade",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 9.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 36,
+    "college_id": "jspm-tathawade",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 9.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 37,
+    "college_id": "jspm-tathawade",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 9.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 38,
+    "college_id": "jspm-tathawade",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.4,
+    "highest_package": 7.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 39,
+    "college_id": "jspm-tathawade",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 40,
+    "college_id": "jspm-tathawade",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 41,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 42,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 43,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 44,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 45,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 46,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.6,
+    "highest_package": 9,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 47,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.6,
+    "highest_package": 9,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 48,
+    "college_id": "mitaoe-alandi",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 49,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 7.1,
+    "highest_package": 19.5,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 50,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 7.1,
+    "highest_package": 19.5,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 51,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 7.1,
+    "highest_package": 19.5,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 52,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 15.7,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 53,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 4.5,
+    "highest_package": 12.4,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 54,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 4.5,
+    "highest_package": 12.4,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 55,
+    "college_id": "kj-somaiya-mumbai",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 15.7,
+    "placement_percentage": 88,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 56,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 7.4,
+    "highest_package": 20.7,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 57,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 7.4,
+    "highest_package": 20.7,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 58,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 7.4,
+    "highest_package": 20.7,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 59,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 7.4,
+    "highest_package": 20.7,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 60,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 5.9,
+    "highest_package": 16.5,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 61,
+    "college_id": "dj-sanghvi-mumbai",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 5.9,
+    "highest_package": 16.5,
+    "placement_percentage": 91,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 62,
+    "college_id": "thakur-mumbai",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 63,
+    "college_id": "thakur-mumbai",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 64,
+    "college_id": "thakur-mumbai",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 65,
+    "college_id": "thakur-mumbai",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 66,
+    "college_id": "thakur-mumbai",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 67,
+    "college_id": "thakur-mumbai",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 68,
+    "college_id": "thakur-mumbai",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 69,
+    "college_id": "thakur-mumbai",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 70,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 10.6,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 71,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 10.6,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 72,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.7,
+    "highest_package": 8.5,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 73,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.9,
+    "highest_package": 6.7,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 74,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.9,
+    "highest_package": 6.7,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 75,
+    "college_id": "gcoe-jalgaon",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 3.7,
+    "highest_package": 8.5,
+    "placement_percentage": 59,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 76,
+    "college_id": "gcoe-karad",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.7,
+    "highest_package": 10.9,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 77,
+    "college_id": "gcoe-karad",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.7,
+    "highest_package": 10.9,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 78,
+    "college_id": "gcoe-karad",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.7,
+    "highest_package": 8.6,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 79,
+    "college_id": "gcoe-karad",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3,
+    "highest_package": 7,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 80,
+    "college_id": "gcoe-karad",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3,
+    "highest_package": 7,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 81,
+    "college_id": "gcoe-karad",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 3.7,
+    "highest_package": 8.6,
+    "placement_percentage": 60,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 82,
+    "college_id": "coep-pune",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 9.7,
+    "highest_package": 23.3,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 83,
+    "college_id": "coep-pune",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 9,
+    "highest_package": 21.6,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 84,
+    "college_id": "coep-pune",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 8.2,
+    "highest_package": 19.7,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 85,
+    "college_id": "coep-pune",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 7.5,
+    "highest_package": 18,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 86,
+    "college_id": "coep-pune",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 6.8,
+    "highest_package": 16.3,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 87,
+    "college_id": "coep-pune",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 7.2,
+    "highest_package": 17.3,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 88,
+    "college_id": "vjti-mumbai",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 7.5,
+    "highest_package": 18,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 89,
+    "college_id": "vjti-mumbai",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 7,
+    "highest_package": 16.8,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 90,
+    "college_id": "vjti-mumbai",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 6.5,
+    "highest_package": 15.6,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 91,
+    "college_id": "vjti-mumbai",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 6,
+    "highest_package": 14.4,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 92,
+    "college_id": "vjti-mumbai",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 5.5,
+    "highest_package": 13.2,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 93,
+    "college_id": "vjti-mumbai",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 5.8,
+    "highest_package": 13.9,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 94,
+    "college_id": "walchand-sangli",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 6.3,
+    "highest_package": 16.4,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 95,
+    "college_id": "walchand-sangli",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 6.3,
+    "highest_package": 16.4,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 96,
+    "college_id": "walchand-sangli",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 5,
+    "highest_package": 13,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 97,
+    "college_id": "walchand-sangli",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 10.4,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 98,
+    "college_id": "walchand-sangli",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 10.4,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 99,
+    "college_id": "walchand-sangli",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 5,
+    "highest_package": 13,
+    "placement_percentage": 78,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 100,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 101,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 102,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 103,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 104,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 105,
+    "college_id": "sggscoe-nanded",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 106,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 107,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 108,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 109,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 110,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 111,
+    "college_id": "gcoe-aurangabad",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 112,
+    "college_id": "wit-solapur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5,
+    "highest_package": 11.9,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 113,
+    "college_id": "wit-solapur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5,
+    "highest_package": 11.9,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 114,
+    "college_id": "wit-solapur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 9.5,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 115,
+    "college_id": "wit-solapur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.2,
+    "highest_package": 7.6,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 116,
+    "college_id": "wit-solapur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.2,
+    "highest_package": 7.6,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 117,
+    "college_id": "wit-solapur",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 9.5,
+    "placement_percentage": 64,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 118,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 119,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 120,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 121,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 122,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 123,
+    "college_id": "gcoe-nagpur",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 124,
+    "college_id": "vnit-nagpur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 11.9,
+    "highest_package": 28.6,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 125,
+    "college_id": "vnit-nagpur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 10.5,
+    "highest_package": 25.2,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 126,
+    "college_id": "vnit-nagpur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 9.5,
+    "highest_package": 22.8,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 127,
+    "college_id": "vnit-nagpur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 8.5,
+    "highest_package": 20.4,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 128,
+    "college_id": "vnit-nagpur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 7.5,
+    "highest_package": 18,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 129,
+    "college_id": "vnit-nagpur",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 8,
+    "highest_package": 19.2,
+    "placement_percentage": 96,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 130,
+    "college_id": "geca-chandrapur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 9.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 131,
+    "college_id": "geca-chandrapur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 9.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 132,
+    "college_id": "geca-chandrapur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.4,
+    "highest_package": 7.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 133,
+    "college_id": "geca-chandrapur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 134,
+    "college_id": "geca-chandrapur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 135,
+    "college_id": "gcoe-yavatmal",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 136,
+    "college_id": "gcoe-yavatmal",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.1,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 137,
+    "college_id": "gcoe-yavatmal",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.3,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 138,
+    "college_id": "gcoe-yavatmal",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.6,
+    "highest_package": 5.8,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 139,
+    "college_id": "gcoe-yavatmal",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.6,
+    "highest_package": 5.8,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 140,
+    "college_id": "kit-kolhapur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 141,
+    "college_id": "kit-kolhapur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 142,
+    "college_id": "kit-kolhapur",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.1,
+    "highest_package": 12.2,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 143,
+    "college_id": "kit-kolhapur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 144,
+    "college_id": "kit-kolhapur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 145,
+    "college_id": "kit-kolhapur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.3,
+    "highest_package": 7.9,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 146,
+    "college_id": "kit-kolhapur",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.1,
+    "highest_package": 9.8,
+    "placement_percentage": 65,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 147,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 148,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.8,
+    "highest_package": 11.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 149,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.9,
+    "highest_package": 9.2,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 150,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.1,
+    "highest_package": 7.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 151,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.1,
+    "highest_package": 7.3,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 152,
+    "college_id": "ssgmce-amravati",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 3.9,
+    "highest_package": 9.2,
+    "placement_percentage": 62,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 153,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 8.8,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 154,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4,
+    "highest_package": 8.8,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 155,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.2,
+    "highest_package": 7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 156,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.6,
+    "highest_package": 5.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 157,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.6,
+    "highest_package": 5.7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 158,
+    "college_id": "pravara-loni-ahmednagar",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 3.2,
+    "highest_package": 7,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 159,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 160,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 161,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 162,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 5.4,
+    "highest_package": 13.2,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 163,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 164,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 165,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.5,
+    "highest_package": 8.6,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 166,
+    "college_id": "kktcoe-nashik",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.3,
+    "highest_package": 10.5,
+    "placement_percentage": 68,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 167,
+    "college_id": "git-lavel-latur",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 4.2,
+    "highest_package": 9.4,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 168,
+    "college_id": "git-lavel-latur",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 4.2,
+    "highest_package": 9.4,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 169,
+    "college_id": "git-lavel-latur",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 3.4,
+    "highest_package": 7.6,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 170,
+    "college_id": "git-lavel-latur",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 171,
+    "college_id": "git-lavel-latur",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 2.7,
+    "highest_package": 6,
+    "placement_percentage": 55,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 172,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 173,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 174,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 175,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 176,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "mech",
+    "year": 2025,
+    "average_package": 3.6,
+    "highest_package": 9,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 177,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "civil",
+    "year": 2025,
+    "average_package": 3.6,
+    "highest_package": 9,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "Tata Motors",
+      "Bajaj Auto",
+      "Kirloskar",
+      "Forbes Marshall",
+      "Siemens"
+    ]
+  },
+  {
+    "id": 178,
+    "college_id": "rit-islampur-sangli",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 179,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "comp",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 180,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "it",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 181,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "aids",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 182,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "aiml",
+    "year": 2025,
+    "average_package": 5.7,
+    "highest_package": 14.3,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "TCS",
+      "Infosys",
+      "Cognizant",
+      "Persistent Systems",
+      "Capgemini"
+    ]
+  },
+  {
+    "id": 183,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "entc",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  },
+  {
+    "id": 184,
+    "college_id": "vidyalankar-mumbai",
+    "branch_id": "electrical",
+    "year": 2025,
+    "average_package": 4.6,
+    "highest_package": 11.5,
+    "placement_percentage": 72,
+    "top_recruiters": [
+      "L&T Technology Services",
+      "Tech Mahindra",
+      "Wipro",
+      "KPIT",
+      "Bajaj Auto"
+    ]
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "college_id": "vit-pune",
+    "year": 2025,
+    "tuition_fee": 115000,
+    "hostel_fee": 55000,
+    "other_fee": 12000
+  },
+  {
+    "id": 2,
+    "college_id": "pccoe-pune",
+    "year": 2025,
+    "tuition_fee": 106000,
+    "hostel_fee": 60000,
+    "other_fee": 12000
+  },
+  {
+    "id": 3,
+    "college_id": "pict-pune",
+    "year": 2025,
+    "tuition_fee": 124000,
+    "hostel_fee": 0,
+    "other_fee": 12000
+  },
+  {
+    "id": 4,
+    "college_id": "aissms-coe-pune",
+    "year": 2025,
+    "tuition_fee": 100000,
+    "hostel_fee": 70000,
+    "other_fee": 12000
+  },
+  {
+    "id": 5,
+    "college_id": "dy-patil-akurdi",
+    "year": 2025,
+    "tuition_fee": 94000,
+    "hostel_fee": 55000,
+    "other_fee": 12000
+  },
+  {
+    "id": 6,
+    "college_id": "jspm-tathawade",
+    "year": 2025,
+    "tuition_fee": 88000,
+    "hostel_fee": 60000,
+    "other_fee": 12000
+  },
+  {
+    "id": 7,
+    "college_id": "mitaoe-alandi",
+    "year": 2025,
+    "tuition_fee": 103000,
+    "hostel_fee": 65000,
+    "other_fee": 12000
+  },
+  {
+    "id": 8,
+    "college_id": "kj-somaiya-mumbai",
+    "year": 2025,
+    "tuition_fee": 118000,
+    "hostel_fee": 70000,
+    "other_fee": 12000
+  },
+  {
+    "id": 9,
+    "college_id": "dj-sanghvi-mumbai",
+    "year": 2025,
+    "tuition_fee": 121000,
+    "hostel_fee": 0,
+    "other_fee": 12000
+  },
+  {
+    "id": 10,
+    "college_id": "thakur-mumbai",
+    "year": 2025,
+    "tuition_fee": 97000,
+    "hostel_fee": 0,
+    "other_fee": 12000
+  },
+  {
+    "id": 11,
+    "college_id": "gcoe-jalgaon",
+    "year": 2025,
+    "tuition_fee": 27000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 12,
+    "college_id": "gcoe-karad",
+    "year": 2025,
+    "tuition_fee": 29000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 13,
+    "college_id": "coep-pune",
+    "year": 2025,
+    "tuition_fee": 45000,
+    "hostel_fee": 20000,
+    "other_fee": 8000
+  },
+  {
+    "id": 14,
+    "college_id": "vjti-mumbai",
+    "year": 2025,
+    "tuition_fee": 48000,
+    "hostel_fee": 22000,
+    "other_fee": 8000
+  },
+  {
+    "id": 15,
+    "college_id": "walchand-sangli",
+    "year": 2025,
+    "tuition_fee": 42000,
+    "hostel_fee": 20000,
+    "other_fee": 7000
+  },
+  {
+    "id": 16,
+    "college_id": "sggscoe-nanded",
+    "year": 2025,
+    "tuition_fee": 38000,
+    "hostel_fee": 18000,
+    "other_fee": 6500
+  },
+  {
+    "id": 17,
+    "college_id": "gcoe-aurangabad",
+    "year": 2025,
+    "tuition_fee": 32000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 18,
+    "college_id": "wit-solapur",
+    "year": 2025,
+    "tuition_fee": 35000,
+    "hostel_fee": 18000,
+    "other_fee": 6500
+  },
+  {
+    "id": 19,
+    "college_id": "gcoe-nagpur",
+    "year": 2025,
+    "tuition_fee": 25000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 20,
+    "college_id": "vnit-nagpur",
+    "year": 2025,
+    "tuition_fee": 62500,
+    "hostel_fee": 25000,
+    "other_fee": 8000
+  },
+  {
+    "id": 21,
+    "college_id": "geca-chandrapur",
+    "year": 2025,
+    "tuition_fee": 29000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 22,
+    "college_id": "gcoe-yavatmal",
+    "year": 2025,
+    "tuition_fee": 25000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 23,
+    "college_id": "kit-kolhapur",
+    "year": 2025,
+    "tuition_fee": 110000,
+    "hostel_fee": 60000,
+    "other_fee": 12000
+  },
+  {
+    "id": 24,
+    "college_id": "ssgmce-amravati",
+    "year": 2025,
+    "tuition_fee": 94000,
+    "hostel_fee": 70000,
+    "other_fee": 12000
+  },
+  {
+    "id": 25,
+    "college_id": "pravara-loni-ahmednagar",
+    "year": 2025,
+    "tuition_fee": 85000,
+    "hostel_fee": 55000,
+    "other_fee": 12000
+  },
+  {
+    "id": 26,
+    "college_id": "kktcoe-nashik",
+    "year": 2025,
+    "tuition_fee": 100000,
+    "hostel_fee": 60000,
+    "other_fee": 12000
+  },
+  {
+    "id": 27,
+    "college_id": "git-lavel-latur",
+    "year": 2025,
+    "tuition_fee": 29000,
+    "hostel_fee": 18000,
+    "other_fee": 6000
+  },
+  {
+    "id": 28,
+    "college_id": "rit-islampur-sangli",
+    "year": 2025,
+    "tuition_fee": 103000,
+    "hostel_fee": 70000,
+    "other_fee": 12000
+  },
+  {
+    "id": 29,
+    "college_id": "vidyalankar-mumbai",
+    "year": 2025,
+    "tuition_fee": 103000,
+    "hostel_fee": 0,
+    "other_fee": 12000
+  }
+]

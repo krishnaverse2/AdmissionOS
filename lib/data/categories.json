@@ -1,0 +1,152 @@
+[
+  {
+    "id": "PWDR-SEBC",
+    "name": "PWD SEBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "DEFR-SEBC",
+    "name": "Defence SEBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "PWDR-OBC",
+    "name": "PWD OBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "DEFR-OBC",
+    "name": "Defence OBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "PWDR-SC",
+    "name": "PWD SC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "PWDR-ST",
+    "name": "PWD ST",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "DEFR-SC",
+    "name": "Defence SC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "DEFR-ST",
+    "name": "Defence ST",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "PWD-O",
+    "name": "PWD Open",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "DEF-O",
+    "name": "Defence Open",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GSEBC",
+    "name": "General SEBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LSEBC",
+    "name": "Ladies SEBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GOPEN",
+    "name": "General Open",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LOPEN",
+    "name": "Ladies Open",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GOBC",
+    "name": "General OBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LOBC",
+    "name": "Ladies OBC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GNTA",
+    "name": "General NT-A",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LNTA",
+    "name": "Ladies NT-A",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GNTB",
+    "name": "General NT-B",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LNTB",
+    "name": "Ladies NT-B",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GNTC",
+    "name": "General NT-C",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LNTC",
+    "name": "Ladies NT-C",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GNTD",
+    "name": "General NT-D",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LNTD",
+    "name": "Ladies NT-D",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GSC",
+    "name": "General SC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LSC",
+    "name": "Ladies SC",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "GST",
+    "name": "General ST",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "LST",
+    "name": "Ladies ST",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "EWS",
+    "name": "Economically Weaker Section",
+    "demandAdjustment": 0
+  },
+  {
+    "id": "MI",
+    "name": "Minority",
+    "demandAdjustment": 0
+  }
+]

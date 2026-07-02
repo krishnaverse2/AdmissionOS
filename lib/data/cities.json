@@ -1,0 +1,822 @@
+[
+  {
+    "id": "amravati",
+    "name": "Amravati",
+    "demandScore": 6
+  },
+  {
+    "id": "yavatmal",
+    "name": "Yavatmal",
+    "demandScore": 6
+  },
+  {
+    "id": "shegaon",
+    "name": "Shegaon",
+    "demandScore": 6
+  },
+  {
+    "id": "akola",
+    "name": "Akola",
+    "demandScore": 6
+  },
+  {
+    "id": "pusad",
+    "name": "Pusad",
+    "demandScore": 6
+  },
+  {
+    "id": "chikhali",
+    "name": "Chikhali",
+    "demandScore": 6
+  },
+  {
+    "id": "buldhana",
+    "name": "Buldhana",
+    "demandScore": 6
+  },
+  {
+    "id": "badnera",
+    "name": "Badnera",
+    "demandScore": 6
+  },
+  {
+    "id": "yelgaon",
+    "name": "Yelgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "washim",
+    "name": "Washim",
+    "demandScore": 6
+  },
+  {
+    "id": "nile",
+    "name": "Nile",
+    "demandScore": 6
+  },
+  {
+    "id": "444302",
+    "name": "444302",
+    "demandScore": 6
+  },
+  {
+    "id": "chhatrapati-sambhajinagar",
+    "name": "Chhatrapati Sambhajinagar",
+    "demandScore": 6
+  },
+  {
+    "id": "nanded",
+    "name": "Nanded",
+    "demandScore": 6
+  },
+  {
+    "id": "aurangabad",
+    "name": "Aurangabad",
+    "demandScore": 6
+  },
+  {
+    "id": "everest-educational-societys-group-of-institutions",
+    "name": "Everest Educational Societys Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "matoshri-pratishans-group-of-institutions",
+    "name": "Matoshri Pratishans Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "latur",
+    "name": "Latur",
+    "demandScore": 6
+  },
+  {
+    "id": "osmanabad",
+    "name": "Osmanabad",
+    "demandScore": 6
+  },
+  {
+    "id": "tuljapur",
+    "name": "Tuljapur",
+    "demandScore": 6
+  },
+  {
+    "id": "ambejogai",
+    "name": "Ambejogai",
+    "demandScore": 6
+  },
+  {
+    "id": "beed",
+    "name": "Beed",
+    "demandScore": 6
+  },
+  {
+    "id": "jalna",
+    "name": "Jalna",
+    "demandScore": 6
+  },
+  {
+    "id": "parbhani",
+    "name": "Parbhani",
+    "demandScore": 6
+  },
+  {
+    "id": "gramin-technical-and-management-campus-nanded",
+    "name": "GRAMIN TECHNICAL AND MANAGEMENT CAMPUS NANDED.",
+    "demandScore": 6
+  },
+  {
+    "id": "international-centre-of-excellence-in-engineering-and-management",
+    "name": "International Centre Of Excellence In Engineering and Management",
+    "demandScore": 6
+  },
+  {
+    "id": "khandgaon",
+    "name": "Khandgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "dr-v-k-patil-college-of-engineering-and-technology",
+    "name": "Dr. V.K. Patil College of Engineering & Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "mangaldeep-college-of-engineering",
+    "name": "Mangaldeep College of Engineering",
+    "demandScore": 6
+  },
+  {
+    "id": "sant-eknath-college-of-engineering",
+    "name": "Sant Eknath College of Engineering",
+    "demandScore": 6
+  },
+  {
+    "id": "veermata-jijabai-technological-institute",
+    "name": "Veermata Jijabai Technological Institute",
+    "demandScore": 6
+  },
+  {
+    "id": "andheri",
+    "name": "Andheri",
+    "demandScore": 6
+  },
+  {
+    "id": "lonere",
+    "name": "Lonere",
+    "demandScore": 6
+  },
+  {
+    "id": "ratnagiri",
+    "name": "Ratnagiri",
+    "demandScore": 6
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "demandScore": 10
+  },
+  {
+    "id": "navi-mumbai",
+    "name": "Navi Mumbai",
+    "demandScore": 10
+  },
+  {
+    "id": "karjat",
+    "name": "Karjat",
+    "demandScore": 6
+  },
+  {
+    "id": "kharghar-navi-mumbai",
+    "name": "Kharghar Navi Mumbai",
+    "demandScore": 10
+  },
+  {
+    "id": "vasai",
+    "name": "Vasai",
+    "demandScore": 6
+  },
+  {
+    "id": "rajendra-mane-college-of-engineering-and-technology-ambav-deorukh",
+    "name": "Rajendra Mane College of Engineering & Technology Ambav Deorukh",
+    "demandScore": 6
+  },
+  {
+    "id": "malad",
+    "name": "Malad",
+    "demandScore": 6
+  },
+  {
+    "id": "kankavli",
+    "name": "Kankavli",
+    "demandScore": 6
+  },
+  {
+    "id": "new-panvel",
+    "name": "New Panvel",
+    "demandScore": 6
+  },
+  {
+    "id": "k-j-somaiya-institute-of-technology",
+    "name": "K J Somaiya Institute of Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "thane",
+    "name": "Thane",
+    "demandScore": 6
+  },
+  {
+    "id": "ulhasnagar",
+    "name": "Ulhasnagar",
+    "demandScore": 6
+  },
+  {
+    "id": "dist-thane",
+    "name": "Dist Thane",
+    "demandScore": 6
+  },
+  {
+    "id": "palghar",
+    "name": "Palghar",
+    "demandScore": 6
+  },
+  {
+    "id": "tal-shahapur",
+    "name": "Tal. Shahapur",
+    "demandScore": 6
+  },
+  {
+    "id": "yadavrao-tasgaonkar-college-of-engineering-and-management",
+    "name": "Yadavrao Tasgaonkar College of Engineering & Management",
+    "demandScore": 6
+  },
+  {
+    "id": "virar",
+    "name": "Virar",
+    "demandScore": 6
+  },
+  {
+    "id": "boisar",
+    "name": "Boisar",
+    "demandScore": 6
+  },
+  {
+    "id": "tal-khalapur-dist-raigad",
+    "name": "Tal. Khalapur. Dist. Raigad",
+    "demandScore": 6
+  },
+  {
+    "id": "pravin-rohidas-patil-college-of-engineering-and-technology",
+    "name": "Pravin Rohidas Patil College of Engineering & Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "badlapur",
+    "name": "Badlapur",
+    "demandScore": 6
+  },
+  {
+    "id": "tal-ambernath",
+    "name": "Tal-Ambernath.",
+    "demandScore": 6
+  },
+  {
+    "id": "panvel",
+    "name": "Panvel",
+    "demandScore": 6
+  },
+  {
+    "id": "sindhudurg",
+    "name": "Sindhudurg.",
+    "demandScore": 6
+  },
+  {
+    "id": "vishwatmak-jangli-maharaj-ashram-trust",
+    "name": "Vishwatmak Jangli Maharaj Ashram Trust",
+    "demandScore": 6
+  },
+  {
+    "id": "raigad",
+    "name": "Raigad.",
+    "demandScore": 6
+  },
+  {
+    "id": "kaman-dist-palghar",
+    "name": "Kaman Dist. Palghar",
+    "demandScore": 6
+  },
+  {
+    "id": "vishwaniketans-institute-of-management-entrepreneurship-and-engineering-technology",
+    "name": "Vishwaniketans Institute of Management Entrepreneurship and Engineering Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "yashwantrao-bhonsale-institute-of-technology",
+    "name": "YASHWANTRAO BHONSALE INSTITUTE OF TECHNOLOGY",
+    "demandScore": 6
+  },
+  {
+    "id": "bapsai-tal-kalyan",
+    "name": "Bapsai Tal.Kalyan",
+    "demandScore": 6
+  },
+  {
+    "id": "devi-mahalaxmi-college-of-engineering-and-technology",
+    "name": "Devi Mahalaxmi College of Engineering and Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "chandrapur",
+    "name": "Chandrapur",
+    "demandScore": 6
+  },
+  {
+    "id": "nagpur",
+    "name": "Nagpur",
+    "demandScore": 6
+  },
+  {
+    "id": "ramtek",
+    "name": "Ramtek",
+    "demandScore": 6
+  },
+  {
+    "id": "sevagram",
+    "name": "Sevagram",
+    "demandScore": 6
+  },
+  {
+    "id": "bhandara",
+    "name": "Bhandara",
+    "demandScore": 6
+  },
+  {
+    "id": "rajiv-gandhi-college-of-engineering-research-and-technology-chandrapur",
+    "name": "Rajiv Gandhi College of Engineering Research & Technology Chandrapur",
+    "demandScore": 6
+  },
+  {
+    "id": "wardha",
+    "name": "Wardha",
+    "demandScore": 6
+  },
+  {
+    "id": "mouza-bamni",
+    "name": "Mouza Bamni",
+    "demandScore": 6
+  },
+  {
+    "id": "bhadrawati",
+    "name": "Bhadrawati",
+    "demandScore": 6
+  },
+  {
+    "id": "sindhi",
+    "name": "Sindhi",
+    "demandScore": 6
+  },
+  {
+    "id": "dist-wardha",
+    "name": "Dist Wardha",
+    "demandScore": 6
+  },
+  {
+    "id": "sakoli",
+    "name": "Sakoli",
+    "demandScore": 6
+  },
+  {
+    "id": "jalgaon",
+    "name": "Jalgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "dhule",
+    "name": "Dhule",
+    "demandScore": 6
+  },
+  {
+    "id": "nashik",
+    "name": "Nashik",
+    "demandScore": 6
+  },
+  {
+    "id": "babulgaon",
+    "name": "Babulgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "chincholi-dist-nashik",
+    "name": "Chincholi Dist. Nashik",
+    "demandScore": 6
+  },
+  {
+    "id": "ahmednagar",
+    "name": "Ahmednagar.",
+    "demandScore": 6
+  },
+  {
+    "id": "kopargaon",
+    "name": "Kopargaon",
+    "demandScore": 6
+  },
+  {
+    "id": "sangamner",
+    "name": "Sangamner",
+    "demandScore": 6
+  },
+  {
+    "id": "dist-nandurbar",
+    "name": "Dist. Nandurbar",
+    "demandScore": 6
+  },
+  {
+    "id": "faizpur",
+    "name": "Faizpur",
+    "demandScore": 6
+  },
+  {
+    "id": "tal-dist-dhule",
+    "name": "Tal Dist Dhule",
+    "demandScore": 6
+  },
+  {
+    "id": "bhusawal",
+    "name": "Bhusawal",
+    "demandScore": 6
+  },
+  {
+    "id": "shirpur",
+    "name": "Shirpur",
+    "demandScore": 6
+  },
+  {
+    "id": "maharashtra",
+    "name": "Maharashtra",
+    "demandScore": 6
+  },
+  {
+    "id": "agaskhind-tal-sinnar",
+    "name": "Agaskhind Tal. Sinnar",
+    "demandScore": 6
+  },
+  {
+    "id": "adgaon-nashik",
+    "name": "Adgaon Nashik",
+    "demandScore": 6
+  },
+  {
+    "id": "group-of-institutions",
+    "name": "Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "akkalkuwa",
+    "name": "Akkalkuwa",
+    "demandScore": 6
+  },
+  {
+    "id": "shevgaon",
+    "name": "Shevgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "chas-dist-ahmednagar",
+    "name": "Chas Dist. Ahmednagar",
+    "demandScore": 6
+  },
+  {
+    "id": "dondaicha",
+    "name": "Dondaicha.",
+    "demandScore": 6
+  },
+  {
+    "id": "nepti",
+    "name": "Nepti",
+    "demandScore": 6
+  },
+  {
+    "id": "bota-sangamner",
+    "name": "Bota Sangamner",
+    "demandScore": 6
+  },
+  {
+    "id": "dist-ahmednagar",
+    "name": "Dist.Ahmednagar",
+    "demandScore": 6
+  },
+  {
+    "id": "malegaon",
+    "name": "Malegaon.",
+    "demandScore": 6
+  },
+  {
+    "id": "nandurbar",
+    "name": "Nandurbar",
+    "demandScore": 6
+  },
+  {
+    "id": "malwadi-bota",
+    "name": "Malwadi-Bota",
+    "demandScore": 6
+  },
+  {
+    "id": "nadurbar",
+    "name": "Nadurbar",
+    "demandScore": 6
+  },
+  {
+    "id": "avasari-khurd",
+    "name": "Avasari Khurd",
+    "demandScore": 6
+  },
+  {
+    "id": "karad",
+    "name": "Karad",
+    "demandScore": 6
+  },
+  {
+    "id": "sangli",
+    "name": "Sangli",
+    "demandScore": 6
+  },
+  {
+    "id": "kolhapur",
+    "name": "Kolhapur",
+    "demandScore": 6
+  },
+  {
+    "id": "pune",
+    "name": "Pune",
+    "demandScore": 10
+  },
+  {
+    "id": "dist-pune",
+    "name": "Dist-Pune",
+    "demandScore": 10
+  },
+  {
+    "id": "vadgaon",
+    "name": "Vadgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "narhe",
+    "name": "Narhe",
+    "demandScore": 6
+  },
+  {
+    "id": "bhima",
+    "name": "Bhima",
+    "demandScore": 6
+  },
+  {
+    "id": "haveli",
+    "name": "Haveli",
+    "demandScore": 6
+  },
+  {
+    "id": "sinhgad-institute-of-technology",
+    "name": "Sinhgad Institute of Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "kondhwa",
+    "name": "Kondhwa",
+    "demandScore": 6
+  },
+  {
+    "id": "manjari",
+    "name": "Manjari",
+    "demandScore": 6
+  },
+  {
+    "id": "ashokrao-mane-group-of-institutions",
+    "name": "Ashokrao Mane Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "solapur",
+    "name": "Solapur",
+    "demandScore": 6
+  },
+  {
+    "id": "pandharpur",
+    "name": "Pandharpur",
+    "demandScore": 6
+  },
+  {
+    "id": "ichalkaranji",
+    "name": "Ichalkaranji.",
+    "demandScore": 6
+  },
+  {
+    "id": "kolhapur-institute-of-technology-s-college-of-engineering",
+    "name": "Kolhapur Institute of Technology's College of Engineering",
+    "demandScore": 6
+  },
+  {
+    "id": "warananagar",
+    "name": "Warananagar",
+    "demandScore": 6
+  },
+  {
+    "id": "satara",
+    "name": "Satara",
+    "demandScore": 6
+  },
+  {
+    "id": "pune-institute-of-computer-technology",
+    "name": "Pune Institute of Computer Technology",
+    "demandScore": 10
+  },
+  {
+    "id": "pune-vidyarthi-griha-s-college-of-engineering-and-technology-and-g-k-pate",
+    "name": "Pune Vidyarthi Griha's College of Engineering and Technology and G K Pate",
+    "demandScore": 10
+  },
+  {
+    "id": "malegaon-baramati",
+    "name": "Malegaon-Baramati",
+    "demandScore": 6
+  },
+  {
+    "id": "jaysingpur",
+    "name": "Jaysingpur",
+    "demandScore": 6
+  },
+  {
+    "id": "baramati-dist-pune",
+    "name": "Baramati Dist.Pune",
+    "demandScore": 10
+  },
+  {
+    "id": "tal-haveli",
+    "name": "Tal. Haveli",
+    "demandScore": 6
+  },
+  {
+    "id": "wagholi",
+    "name": "Wagholi",
+    "demandScore": 6
+  },
+  {
+    "id": "kille-macchindragad-tal-walva-district-sangali",
+    "name": "Kille Macchindragad Tal. Walva District- Sangali",
+    "demandScore": 6
+  },
+  {
+    "id": "sanjeevan-group-of-institutions",
+    "name": "Sanjeevan Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "yadrav",
+    "name": "Yadrav",
+    "demandScore": 6
+  },
+  {
+    "id": "tal-indapur",
+    "name": "Tal. Indapur",
+    "demandScore": 6
+  },
+  {
+    "id": "pisoli",
+    "name": "Pisoli",
+    "demandScore": 6
+  },
+  {
+    "id": "dumbarwadi",
+    "name": "Dumbarwadi",
+    "demandScore": 6
+  },
+  {
+    "id": "bhor",
+    "name": "Bhor",
+    "demandScore": 6
+  },
+  {
+    "id": "karmayogi-institute-of-technology",
+    "name": "Karmayogi Institute of Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "kuran",
+    "name": "Kuran",
+    "demandScore": 6
+  },
+  {
+    "id": "isbm-college-of-engineering-pune",
+    "name": "ISBM College Of Engineering Pune",
+    "demandScore": 10
+  },
+  {
+    "id": "sasewadi",
+    "name": "Sasewadi",
+    "demandScore": 6
+  },
+  {
+    "id": "swami-chincholi-tal-daund-dist-pune",
+    "name": "Swami - Chincholi Tal. Daund Dist. Pune",
+    "demandScore": 10
+  },
+  {
+    "id": "navsahyadri-education-societys-group-of-institutions",
+    "name": "Navsahyadri Education Societys Group of Institutions",
+    "demandScore": 6
+  },
+  {
+    "id": "samarth-college-of-engineering-and-management",
+    "name": "Samarth College of Engineering and Management",
+    "demandScore": 6
+  },
+  {
+    "id": "korti-tal-pandharpur-dist-solapur",
+    "name": "Korti Tal. Pandharpur Dist Solapur",
+    "demandScore": 6
+  },
+  {
+    "id": "miraj",
+    "name": "Miraj",
+    "demandScore": 6
+  },
+  {
+    "id": "dist-kolhapur",
+    "name": "Dist Kolhapur",
+    "demandScore": 6
+  },
+  {
+    "id": "international-institute-of-information-technology",
+    "name": "International Institute of Information Technology",
+    "demandScore": 6
+  },
+  {
+    "id": "sangola",
+    "name": "Sangola",
+    "demandScore": 6
+  },
+  {
+    "id": "phaltan-education-societys-college-of-engineering-thakurki-tal-phaltan-dist-satara",
+    "name": "Phaltan Education Societys College of Engineering Thakurki Tal- Phaltan Dist-Satara",
+    "demandScore": 6
+  },
+  {
+    "id": "kusgaon",
+    "name": "Kusgaon",
+    "demandScore": 6
+  },
+  {
+    "id": "barshi",
+    "name": "Barshi",
+    "demandScore": 6
+  },
+  {
+    "id": "akluj",
+    "name": "Akluj",
+    "demandScore": 6
+  },
+  {
+    "id": "someshwar-nagar",
+    "name": "Someshwar Nagar",
+    "demandScore": 6
+  },
+  {
+    "id": "gadhinglaj",
+    "name": "Gadhinglaj",
+    "demandScore": 6
+  },
+  {
+    "id": "sanjay-ghodawat-institute",
+    "name": "Sanjay Ghodawat Institute",
+    "demandScore": 6
+  },
+  {
+    "id": "lonavala",
+    "name": "Lonavala",
+    "demandScore": 6
+  },
+  {
+    "id": "ravet",
+    "name": "Ravet",
+    "demandScore": 6
+  },
+  {
+    "id": "talegaon",
+    "name": "Talegaon",
+    "demandScore": 6
+  },
+  {
+    "id": "coep-technological-university",
+    "name": "COEP Technological University",
+    "demandScore": 6
+  },
+  {
+    "id": "pal",
+    "name": "Pal",
+    "demandScore": 6
+  },
+  {
+    "id": "yelur",
+    "name": "Yelur",
+    "demandScore": 6
+  }
+]
