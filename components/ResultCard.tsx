@@ -48,9 +48,9 @@ export default function ResultCard({
           </div>
 
           <div>
-            <h3 className="line-clamp-2 text-base font-black leading-tight text-slate-950">
-              {result.shortName}
-            </h3>
+            <h3 className="text-base font-black leading-tight text-slate-950 break-words">
+  {result.collegeName}
+</h3>
             <p className="mt-1 text-xs font-semibold text-slate-500">
               📍 {result.cityName} · {result.collegeType}
             </p>
