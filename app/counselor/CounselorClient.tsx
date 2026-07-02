@@ -22,7 +22,7 @@ export default function CounselorClient() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      text: "Hi, I'm your CAP counselor. Ask me about a college's placement record, compare two branches, or ask which colleges fit your marks best — I'll only answer from the cutoff, placement, and fee data in CAP Guru AI, and I'll tell you when I don't have something.",
+      text: "Hi, I'm your CAP counselor. Ask me about colleges, branches, or placements.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -38,16 +38,20 @@ export default function CounselorClient() {
 
   async function send(text: string) {
     if (!text.trim() || sending) return;
+
     setMessages((m) => [...m, { role: "user", text }]);
     setInput("");
     setSending(true);
+
     try {
       const res = await fetch("/api/ai-counselor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: text, lastPrediction }),
       });
+
       const data = await res.json();
+
       setMessages((m) => [
         ...m,
         { role: "assistant", text: data.answer ?? "Something went wrong." },
@@ -55,7 +59,10 @@ export default function CounselorClient() {
     } catch {
       setMessages((m) => [
         ...m,
-        { role: "assistant", text: "Something went wrong reaching the counselor. Try again." },
+        {
+          role: "assistant",
+          text: "Something went wrong reaching the counselor. Try again.",
+        },
       ]);
     } finally {
       setSending(false);
@@ -63,83 +70,103 @@ export default function CounselorClient() {
   }
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-57px)] max-w-3xl flex-col px-4 sm:px-6">
-      <div className="border-b border-line py-4">
-        <p className="font-mono-figures text-xs font-semibold uppercase tracking-widest text-indigo">
-          AI Counselor
-        </p>
-        <h1 className="font-display text-xl font-bold text-ink">
-          Ask about colleges, branches, or placements
-        </h1>
+    <div className="flex h-[calc(100vh-82px)] flex-col bg-white">
+      {/* Header */}
+      <header className="sticky top-0 z-40 bg-white px-5 pb-4 pt-5 shadow-sm">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[13px] font-black uppercase tracking-[0.2em] text-teal-600">
+              AI Counselor
+            </p>
+            <h1 className="mt-1 text-[25px] font-black leading-tight text-slate-950">
+              Ask Admission Doubts
+            </h1>
+          </div>
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-3xl">
+            🤖
+          </div>
+        </div>
+
         {!lastPrediction && (
-          <p className="mt-1 text-xs text-ink/50">
+          <p className="mt-3 text-[13px] font-medium leading-5 text-slate-500">
             Tip: fill the{" "}
-            <Link href="/" className="text-indigo underline">
+            <Link href="/" className="font-black text-teal-600 underline">
               predictor form
             </Link>{" "}
-            first so I can answer questions about your own marks.
+            first for personalized answers.
           </p>
         )}
-      </div>
+      </header>
 
-      <div className="flex-1 space-y-3 overflow-y-auto py-4">
+      {/* Messages */}
+      <div className="flex-1 space-y-4 overflow-y-auto px-5 py-5">
         {messages.map((m, i) => (
           <div
             key={i}
-            className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+            className={`flex ${
+              m.role === "user" ? "justify-end" : "justify-start"
+            }`}
           >
             <div
-              className={`max-w-[85%] whitespace-pre-line rounded-lg px-4 py-2.5 text-sm leading-relaxed ${
+              className={`max-w-[85%] whitespace-pre-line rounded-[22px] px-4 py-3 text-[15px] font-medium leading-7 shadow-sm ${
                 m.role === "user"
-                  ? "bg-indigo text-paper"
-                  : "border border-line bg-white text-ink"
+                  ? "rounded-br-md bg-teal-600 text-white"
+                  : "rounded-bl-md bg-slate-100 text-slate-800"
               }`}
             >
               {m.text}
             </div>
           </div>
         ))}
+
         {sending && (
           <div className="flex justify-start">
-            <div className="rounded-lg border border-line bg-white px-4 py-2.5 text-sm text-ink/50">
+            <div className="rounded-[22px] rounded-bl-md bg-slate-100 px-4 py-3 text-[15px] font-bold text-slate-500">
               Checking the data…
             </div>
           </div>
         )}
+
         <div ref={bottomRef} />
       </div>
 
-      <div className="flex flex-wrap gap-2 border-t border-line py-3">
-        {SUGGESTIONS.map((s) => (
-          <button
-            key={s}
-            onClick={() => send(s)}
-            className="rounded-full border border-line px-3 py-1.5 text-xs font-medium text-ink/65 hover:border-indigo hover:text-indigo"
-          >
-            {s}
-          </button>
-        ))}
+      {/* Suggestions */}
+      <div className="border-t border-slate-100 bg-white px-5 py-3">
+        <div className="flex gap-2 overflow-x-auto pb-1">
+          {SUGGESTIONS.map((s) => (
+            <button
+              key={s}
+              onClick={() => send(s)}
+              className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-[12px] font-bold text-slate-600 shadow-sm"
+            >
+              {s}
+            </button>
+          ))}
+        </div>
       </div>
 
+      {/* Input */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
           send(input);
         }}
-        className="flex gap-2 border-t border-line py-4"
+        className="flex gap-3 border-t border-slate-100 bg-white px-5 pb-5 pt-3"
       >
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask about a college, branch, or placement…"
-          className="input flex-1"
+          placeholder="Ask about college, branch..."
+          className="h-12 flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-[15px] font-medium outline-none focus:border-teal-500"
         />
+
         <button
           type="submit"
           disabled={sending}
-          className="rounded-md bg-indigo px-5 py-2 text-sm font-semibold text-paper hover:bg-indigo-light disabled:opacity-60"
+          className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-600 text-2xl font-black text-white shadow-lg shadow-teal-600/25 disabled:opacity-60"
         >
-          Send
+          ↑
         </button>
       </form>
     </div>

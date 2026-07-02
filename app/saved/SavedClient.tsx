@@ -27,70 +27,116 @@ export default function SavedClient() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
-      <p className="font-mono-figures text-xs font-semibold uppercase tracking-widest text-indigo">
-        Your dashboard
-      </p>
-      <h1 className="font-display text-2xl font-bold text-ink">
-        Saved colleges & recent searches
-      </h1>
+    <div className="min-h-screen bg-white px-5 pb-8 pt-5">
+      {/* Header */}
+      <header className="sticky top-0 z-40 -mx-5 bg-white px-5 pb-4 pt-5 shadow-sm">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[13px] font-black uppercase tracking-[0.2em] text-teal-600">
+              Your Dashboard
+            </p>
+            <h1 className="mt-1 text-[30px] font-black tracking-tight text-slate-950">
+              Saved
+            </h1>
+          </div>
 
-      <section className="mt-6">
-        <h2 className="font-display text-lg font-bold text-ink">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-3xl">
+            ❤️
+          </div>
+        </div>
+      </header>
+
+      {/* Saved Colleges */}
+      <section className="pt-6">
+        <h2 className="text-[24px] font-black text-slate-950">
           Saved colleges
         </h2>
+
         {saved === null && (
-          <p className="mt-2 text-sm text-ink/55">Loading…</p>
+          <div className="mt-4 rounded-[24px] bg-slate-50 p-5 text-center">
+            <p className="text-[15px] font-bold text-slate-500">Loading…</p>
+          </div>
         )}
+
         {saved !== null && saved.length === 0 && (
-          <p className="mt-2 text-sm text-ink/55">
-            Nothing saved yet. Use the &ldquo;Save college&rdquo; button on
-            any result card to keep track of options here.
-          </p>
+          <div className="mt-4 rounded-[24px] bg-slate-50 p-6 text-center">
+            <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-4xl shadow-sm">
+              ❤️
+            </div>
+            <p className="text-[16px] font-bold leading-7 text-slate-600">
+              Nothing saved yet. Use the “Save college” button on any result card.
+            </p>
+          </div>
         )}
-        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+        <div className="mt-4 grid grid-cols-1 gap-4">
           {saved?.map((s) => (
             <Link
               key={`${s.collegeId}-${s.branchId}`}
               href={`/college/${s.collegeId}`}
-              className="rounded-lg border border-line bg-white p-4 transition-shadow hover:shadow-md"
+              className="rounded-[24px] bg-white p-5 shadow-lg shadow-slate-200/80 ring-1 ring-slate-100"
             >
-              <p className="font-display font-semibold text-ink">
-                {s.collegeName}
-              </p>
-              <p className="text-sm text-ink/60">{s.branchName}</p>
-              {s.averagePackage !== null && (
-                <p className="mt-1 font-mono-figures text-xs text-ink/45">
-                  Avg. package ₹{s.averagePackage} LPA
-                </p>
-              )}
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-3xl">
+                  🏛️
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-[18px] font-black leading-snug text-slate-950">
+                    {s.collegeName}
+                  </p>
+
+                  <p className="mt-1 text-[15px] font-bold text-slate-500">
+                    {s.branchName}
+                  </p>
+
+                  {s.averagePackage !== null && (
+                    <p className="mt-2 inline-flex rounded-full bg-teal-50 px-3 py-1 text-[12px] font-black text-teal-700">
+                      Avg. package ₹{s.averagePackage} LPA
+                    </p>
+                  )}
+                </div>
+
+                <span className="text-2xl text-slate-300">›</span>
+              </div>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-display text-lg font-bold text-ink">
+      {/* Recent Searches */}
+      <section className="mt-9">
+        <h2 className="text-[24px] font-black text-slate-950">
           Recent searches
         </h2>
+
         {history.length === 0 && (
-          <p className="mt-2 text-sm text-ink/55">
-            Your search history (stored on this device) will show up here
-            after you run the predictor.
-          </p>
+          <div className="mt-4 rounded-[24px] bg-slate-50 p-6 text-center">
+            <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-4xl shadow-sm">
+              🔍
+            </div>
+            <p className="text-[16px] font-bold leading-7 text-slate-600">
+              Your search history will show up here after you run the predictor.
+            </p>
+          </div>
         )}
-        <div className="mt-3 space-y-2">
+
+        <div className="mt-4 space-y-3">
           {history.map((h, i) => (
             <div
               key={i}
-              className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-white px-4 py-3"
+              className="rounded-[22px] bg-white p-4 shadow-md shadow-slate-200/70 ring-1 ring-slate-100"
             >
-              <p className="text-sm text-ink/75">
-                {h.percentage}% · {h.category} ·{" "}
+              <p className="text-[15px] font-black text-slate-800">
+                {h.percentage}% · {h.category}
+              </p>
+
+              <p className="mt-1 text-[14px] font-bold text-slate-500">
                 {h.branch === "any" ? "Any branch" : h.branch} ·{" "}
                 {h.city === "any" ? "Any city" : h.city}
               </p>
-              <p className="text-xs text-ink/40">
+
+              <p className="mt-2 text-[12px] font-medium text-slate-400">
                 {new Date(h.searchedAt).toLocaleString("en-IN")}
               </p>
             </div>
