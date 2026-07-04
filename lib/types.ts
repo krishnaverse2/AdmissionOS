@@ -101,6 +101,8 @@ export interface PredictionResult {
   isCutoffVerified: boolean;
   expectedCutoff: ExpectedCutoffRange;
   chance: ChanceLevel;
+  qualityRank: number;
+  qualityScore: number;
   averagePackage: number;
   highestPackage: number;
   placementPercentage: number;

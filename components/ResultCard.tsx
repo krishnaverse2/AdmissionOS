@@ -41,6 +41,16 @@ export default function ResultCard({
 
   return (
     <article className="overflow-hidden rounded-[2rem] bg-white p-4 shadow-xl shadow-teal-950/8 ring-1 ring-slate-200/70">
+      <div className="mb-3 flex items-center justify-between">
+        <div className="rounded-full bg-slate-950 px-3 py-1.5 text-xs font-black text-white">
+          #{result.qualityRank} Rank
+        </div>
+
+        <div className="rounded-full bg-teal-50 px-3 py-1.5 text-xs font-black text-teal-700">
+          Score {result.qualityScore}
+        </div>
+      </div>
+
       <div className="flex items-start justify-between gap-3">
         <div className="flex gap-3">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-teal-50 text-2xl">
@@ -48,9 +58,10 @@ export default function ResultCard({
           </div>
 
           <div>
-            <h3 className="text-base font-black leading-tight text-slate-950 break-words">
-  {result.collegeName}
-</h3>
+            <h3 className="break-words text-base font-black leading-tight text-slate-950">
+              {result.collegeName}
+            </h3>
+
             <p className="mt-1 text-xs font-semibold text-slate-500">
               📍 {result.cityName} · {result.collegeType}
             </p>
@@ -70,6 +81,7 @@ export default function ResultCard({
 
       <div className="mt-4 flex flex-wrap gap-2">
         <ChanceBadge chance={result.chance} />
+
         <span className="rounded-full bg-slate-100 px-3 py-1.5 text-[11px] font-bold text-slate-600">
           💻 {result.branchName}
         </span>
@@ -87,7 +99,11 @@ export default function ResultCard({
         />
         <Stat
           label="Fees"
-          value={result.totalFee ? `₹${result.totalFee.toLocaleString("en-IN")}` : "N/A"}
+          value={
+            result.totalFee
+              ? `₹${result.totalFee.toLocaleString("en-IN")}`
+              : "N/A"
+          }
         />
       </div>
 
