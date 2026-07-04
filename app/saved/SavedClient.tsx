@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getSearchHistory } from "@/lib/clientStore";
+import Loader from "@/components/Loader";
 
 interface SavedItem {
   collegeId: string;
@@ -13,50 +14,37 @@ interface SavedItem {
   savedAt: string;
 }
 
+type SearchHistory = ReturnType<typeof getSearchHistory>;
+
 export default function SavedClient() {
+  const [mounted, setMounted] = useState(false);
   const [saved, setSaved] = useState<SavedItem[] | null>(null);
-  const [history] = useState<ReturnType<typeof getSearchHistory>>(() =>
-    typeof window !== "undefined" ? getSearchHistory() : []
-  );
+  const [history, setHistory] = useState<SearchHistory>([]);
 
   useEffect(() => {
+    setMounted(true);
+    setHistory(getSearchHistory());
+
     fetch("/api/saved-colleges")
       .then((res) => res.json())
       .then((data) => setSaved(data.saved ?? []))
       .catch(() => setSaved([]));
   }, []);
 
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-white px-5 pb-8 pt-5">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white px-5 pb-8 pt-5">
-      {/* Header */}
-      <header className="sticky top-0 z-40 -mx-5 bg-white px-5 pb-4 pt-5 shadow-sm">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-[13px] font-black uppercase tracking-[0.2em] text-teal-600">
-              Your Dashboard
-            </p>
-            <h1 className="mt-1 text-[30px] font-black tracking-tight text-slate-950">
-              Saved
-            </h1>
-          </div>
-
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-3xl">
-            ❤️
-          </div>
-        </div>
-      </header>
-
-      {/* Saved Colleges */}
       <section className="pt-6">
-        <h2 className="text-[24px] font-black text-slate-950">
-          Saved colleges
-        </h2>
+        <h2 className="text-[24px] font-black text-slate-950">Saved colleges</h2>
 
-        {saved === null && (
-          <div className="mt-4 rounded-[24px] bg-slate-50 p-5 text-center">
-            <p className="text-[15px] font-bold text-slate-500">Loading…</p>
-          </div>
-        )}
+        {saved === null && <Loader />}
 
         {saved !== null && saved.length === 0 && (
           <div className="mt-4 rounded-[24px] bg-slate-50 p-6 text-center">
@@ -104,7 +92,6 @@ export default function SavedClient() {
         </div>
       </section>
 
-      {/* Recent Searches */}
       <section className="mt-9">
         <h2 className="text-[24px] font-black text-slate-950">
           Recent searches

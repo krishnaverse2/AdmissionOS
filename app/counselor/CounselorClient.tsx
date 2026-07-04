@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { getLastPrediction } from "@/lib/clientStore";
 import type { PredictionInput } from "@/lib/types";
+import Loader from "@/components/Loader";
 
 interface Message {
   role: "user" | "assistant";
@@ -19,22 +20,30 @@ const SUGGESTIONS = [
 ];
 
 export default function CounselorClient() {
+  const [mounted, setMounted] = useState(false);
+  const [lastPrediction, setLastPrediction] = useState<PredictionInput | null>(
+    null
+  );
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
       text: "Hi, I'm your CAP counselor. Ask me about colleges, branches, or placements.",
     },
   ]);
+
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
-  const [lastPrediction] = useState<PredictionInput | null>(() =>
-    typeof window !== "undefined" ? getLastPrediction() : null
-  );
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setMounted(true);
+    setLastPrediction(getLastPrediction());
+  }, []);
+
+  useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, sending]);
 
   async function send(text: string) {
     if (!text.trim() || sending) return;
@@ -69,15 +78,23 @@ export default function CounselorClient() {
     }
   }
 
+  if (!mounted) {
+    return (
+      <div className="flex h-[calc(100vh-82px)] items-center justify-center bg-white">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <div className="flex h-[calc(100vh-82px)] flex-col bg-white">
-      {/* Header */}
       <header className="sticky top-0 z-40 bg-white px-5 pb-4 pt-5 shadow-sm">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-[13px] font-black uppercase tracking-[0.2em] text-teal-600">
               AI Counselor
             </p>
+
             <h1 className="mt-1 text-[25px] font-black leading-tight text-slate-950">
               Ask Admission Doubts
             </h1>
@@ -99,7 +116,6 @@ export default function CounselorClient() {
         )}
       </header>
 
-      {/* Messages */}
       <div className="flex-1 space-y-4 overflow-y-auto px-5 py-5">
         {messages.map((m, i) => (
           <div
@@ -131,7 +147,6 @@ export default function CounselorClient() {
         <div ref={bottomRef} />
       </div>
 
-      {/* Suggestions */}
       <div className="border-t border-slate-100 bg-white px-5 py-3">
         <div className="flex gap-2 overflow-x-auto pb-1">
           {SUGGESTIONS.map((s) => (
@@ -146,7 +161,6 @@ export default function CounselorClient() {
         </div>
       </div>
 
-      {/* Input */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
