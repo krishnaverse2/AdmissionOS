@@ -7,6 +7,8 @@ import { saveLastPrediction } from "@/lib/clientStore";
 import CityInput from "@/components/CityInput";
 import type { PredictionInput } from "@/lib/types";
 
+const FORM_STORAGE_KEY = "admissionos_predictor_form";
+
 const BRANCH_GROUPS = [
   { id: "any", name: "Any branch" },
   { id: "group-computer", name: "Computer / IT / AI / AIDS / Cyber / Data Science" },
@@ -41,11 +43,43 @@ export default function PredictorForm({
 
   useEffect(() => {
     const savedName = localStorage.getItem("admissionos_user_name") || "";
-    setForm((f) => ({ ...f, studentName: savedName }));
-  }, []);
+    const savedFormRaw = localStorage.getItem(FORM_STORAGE_KEY);
 
-  function update<K extends keyof PredictionInput>(key: K, value: PredictionInput[K]) {
-    setForm((f) => ({ ...f, [key]: value }));
+    if (savedFormRaw) {
+      try {
+        const savedForm = JSON.parse(savedFormRaw) as PredictionInput;
+
+        setForm({
+          ...savedForm,
+          studentName: savedName,
+          city: initialCity !== "any" ? initialCity : savedForm.city || "any",
+          collegeType: "Any",
+        });
+
+        return;
+      } catch {
+        localStorage.removeItem(FORM_STORAGE_KEY);
+      }
+    }
+
+    setForm((f) => ({
+      ...f,
+      studentName: savedName,
+      city: initialCity !== "any" ? initialCity : f.city,
+    }));
+  }, [initialCity]);
+
+  function update<K extends keyof PredictionInput>(
+    key: K,
+    value: PredictionInput[K]
+  ) {
+    setForm((f) => {
+      const nextForm = { ...f, [key]: value };
+
+      localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(nextForm));
+
+      return nextForm;
+    });
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -62,6 +96,8 @@ export default function PredictorForm({
     }
 
     setSubmitting(true);
+
+    localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(form));
     saveLastPrediction(form);
     sessionStorage.setItem("cgai_predict_input", JSON.stringify(form));
 
