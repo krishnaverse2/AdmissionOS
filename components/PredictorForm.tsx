@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import categoriesData from "@/lib/data/categories.json";
 import { saveLastPrediction } from "@/lib/clientStore";
 import CityInput from "@/components/CityInput";
+import Loader from "@/components/Loader";
 import type { PredictionInput } from "@/lib/types";
 
 const FORM_STORAGE_KEY = "admissionos_predictor_form";
@@ -21,6 +22,16 @@ const BRANCH_GROUPS = [
   { id: "group-other", name: "Other branches" },
 ];
 
+const DEFAULT_FORM: PredictionInput = {
+  studentName: "",
+  percentage: 0,
+  category: "GOPEN",
+  gender: "Other",
+  city: "any",
+  branch: "any",
+  collegeType: "Any",
+};
+
 export default function PredictorForm({
   onPredicted,
   initialCity = "any",
@@ -29,52 +40,51 @@ export default function PredictorForm({
   initialCity?: string;
 }) {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-
-  const [form, setForm] = useState<PredictionInput>({
-    studentName: "",
-    percentage: 0,
-    category: "GOPEN",
-    gender: "Other",
-    city: "any",
-    branch: "any",
-    collegeType: "Any",
-  });
+  const [form, setForm] = useState<PredictionInput>(DEFAULT_FORM);
 
   useEffect(() => {
     const savedName = localStorage.getItem("admissionos_user_name") || "";
     const savedFormRaw = localStorage.getItem(FORM_STORAGE_KEY);
 
+    let nextForm: PredictionInput = {
+      ...DEFAULT_FORM,
+      studentName: savedName,
+    };
+
     if (savedFormRaw) {
       try {
         const savedForm = JSON.parse(savedFormRaw) as PredictionInput;
 
-        setForm({
+        nextForm = {
+          ...DEFAULT_FORM,
           ...savedForm,
           studentName: savedName,
-          city: initialCity !== "any" ? initialCity : savedForm.city || "any",
           collegeType: "Any",
-        });
-
-        return;
+        };
       } catch {
         localStorage.removeItem(FORM_STORAGE_KEY);
       }
     }
 
-    setForm((f) => ({
-      ...f,
-      studentName: savedName,
-      city: initialCity !== "any" ? initialCity : f.city,
-    }));
+    if (initialCity !== "any") {
+      nextForm.city = initialCity;
+    }
+
+    setForm(nextForm);
+    setMounted(true);
   }, [initialCity]);
 
   function update<K extends keyof PredictionInput>(
     key: K,
     value: PredictionInput[K]
   ) {
-    setForm((f) => {
-      const nextForm = { ...f, [key]: value };
+    setForm((current) => {
+      const nextForm = {
+        ...current,
+        [key]: value,
+      };
 
       localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(nextForm));
 
@@ -101,8 +111,16 @@ export default function PredictorForm({
     saveLastPrediction(form);
     sessionStorage.setItem("cgai_predict_input", JSON.stringify(form));
 
-    if (onPredicted) return onPredicted();
+    if (onPredicted) {
+      onPredicted();
+      return;
+    }
+
     router.push("/results");
+  }
+
+  if (!mounted) {
+    return <Loader />;
   }
 
   return (
