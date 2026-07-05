@@ -211,7 +211,7 @@ export default function Home() {
       ===================================================== */}
       <main
         ref={scrollAreaRef}
-        className="fixed bottom-0 left-1/2 top-[286px] w-full max-w-[430px] -translate-x-1/2 overflow-y-auto overscroll-contain px-5 pb-28 pt-4"
+        className="fixed bottom-0 left-1/2 top-[286px] w-full max-w-[430px] -translate-x-1/2 overflow-y-auto overscroll-contain px-5 pb-28 pt-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {/* =====================================================
             PREDICTOR HERO
