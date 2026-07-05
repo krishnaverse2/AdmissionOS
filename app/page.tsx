@@ -110,7 +110,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#F7FBFA] pb-28">
+    <div className="h-screen overflow-hidden bg-[#F7FBFA]">
       {/* =====================================================
           FIXED / STICKY HEADER
       ===================================================== */}
@@ -148,7 +148,7 @@ export default function Home() {
       {/* Header space */}
       <div className="h-[76px]" />
 
-      <main className="mx-auto w-full max-w-[430px] px-5 pt-5">
+      <main className="mx-auto h-[calc(100vh-76px)] w-full max-w-[430px] overflow-y-auto px-5 pb-28 pt-5">
         {/* =====================================================
             WELCOME CARD
         ===================================================== */}
