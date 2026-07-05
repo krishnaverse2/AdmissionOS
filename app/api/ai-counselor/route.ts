@@ -9,10 +9,6 @@ interface ChatMessage {
   text: string;
 }
 
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 function buildPredictionContext(lastPrediction?: PredictionInput) {
   if (!lastPrediction) {
     return "No predictor form data is available yet.";
@@ -28,13 +24,14 @@ No matching prediction results were found.`;
   }
 
   const collegeLines = results.map((r, index) => {
-    return `${index + 1}. ${r.collegeName} | ${r.branchName} | Chance: ${
-      r.chance
-    } | Last cutoff: ${r.previousCutoff}% | Expected: ${
-      r.expectedCutoff.min
-    }-${r.expectedCutoff.max}% | Avg package: ₹${
-      r.averagePackage || "N/A"
-    } LPA | Highest: ₹${r.highestPackage || "N/A"} LPA | Fee: ₹${
+    return `${index + 1}. ${r.collegeName}
+Branch: ${r.branchName}
+Chance: ${r.chance}
+Last cutoff: ${r.previousCutoff}%
+Expected cutoff: ${r.expectedCutoff.min}-${r.expectedCutoff.max}%
+Average package: ₹${r.averagePackage || "N/A"} LPA
+Highest package: ₹${r.highestPackage || "N/A"} LPA
+Total fee: ₹${
       r.totalFee ? r.totalFee.toLocaleString("en-IN") : "N/A"
     }`;
   });
@@ -43,13 +40,13 @@ No matching prediction results were found.`;
 ${JSON.stringify(lastPrediction, null, 2)}
 
 Top matching colleges from AdmissionOS:
-${collegeLines.join("\n")}`;
+${collegeLines.join("\n\n")}`;
 }
 
 function convertMessages(messages: ChatMessage[]) {
-  return messages.slice(-12).map((m) => ({
-    role: m.role,
-    content: m.text,
+  return messages.slice(-12).map((message) => ({
+    role: message.role as "user" | "assistant",
+    content: message.text,
   }));
 }
 
@@ -57,11 +54,15 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const message: string = body.message ?? "";
+    const message: string =
+      typeof body.message === "string" ? body.message : "";
+
     const messages: ChatMessage[] = Array.isArray(body.messages)
       ? body.messages
       : [];
-    const lastPrediction: PredictionInput | undefined = body.lastPrediction;
+
+    const lastPrediction: PredictionInput | undefined =
+      body.lastPrediction ?? undefined;
 
     if (!message.trim()) {
       return NextResponse.json(
@@ -70,55 +71,79 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (!process.env.OPENAI_API_KEY) {
-      const fallback = answerCounselorQuestion(message, { lastPrediction });
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    // Safe fallback when OpenAI key is missing.
+    // Important: OpenAI client is NOT created before this check.
+    if (!apiKey) {
+      const fallback = answerCounselorQuestion(message, {
+        lastPrediction,
+      });
 
       return NextResponse.json({
-        answer:
-          fallback.answer +
-          "\n\nOpenAI API key is missing, so this answer used the offline AdmissionOS counselor engine.",
+        answer: fallback.answer,
         usedData: fallback.usedData,
+        mode: "offline",
       });
     }
 
-    const predictionContext = buildPredictionContext(lastPrediction);
+    // Create client only when API key actually exists.
+    const client = new OpenAI({
+      apiKey,
+    });
 
-    const response = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      temperature: 0.4,
-      max_tokens: 900,
-      messages: [
-        {
-          role: "system",
-          content: `You are AdmissionOS AI Counselor, a helpful Indian engineering admission counselor for Maharashtra DSE / Diploma to Degree students.
+    const predictionContext =
+      buildPredictionContext(lastPrediction);
 
-Your job:
-- Answer like ChatGPT: natural, direct, helpful, conversational.
-- Understand follow-up questions using chat history.
-- Use the student's predictor data when available.
-- Give practical advice on colleges, branches, cutoffs, packages, fees, CAP rounds, and preference list.
-- Prefer Maharashtra DSE context.
-- Be honest when data is missing.
-- Do not invent official placement/cutoff data.
-- If package data is estimated or unavailable, say clearly.
-- Keep answers easy to understand for a student.
-- Use short paragraphs and bullets.
-- If user asks in Hinglish/simple English, reply in simple English/Hinglish style.
+    const response =
+      await client.chat.completions.create({
+        model: "gpt-4o-mini",
+        temperature: 0.4,
+        max_tokens: 900,
+
+        messages: [
+          {
+            role: "system",
+            content: `You are AdmissionOS AI Counselor.
+
+You are an intelligent, conversational Maharashtra engineering admission assistant.
+
+Your behavior:
+- Answer the exact question the user asks.
+- Talk naturally like a helpful AI assistant.
+- Understand follow-up questions from conversation history.
+- Do not force every answer into a fixed template.
+- Give direct answers first.
+- Explain when useful.
+- Use simple English.
+- If the user uses Hinglish, you may answer naturally in simple Hinglish.
+- Focus strongly on Maharashtra DSE / Direct Second Year engineering admission.
+- Help with colleges, branches, placements, packages, cutoffs, CAP rounds, option forms, fees, city choices, and preference lists.
+- Use AdmissionOS predictor context when relevant.
+- Never invent official cutoff or placement figures.
+- Clearly say when exact data is unavailable.
+- Distinguish between verified data, estimates, and general advice.
+- Remember previous messages in the current conversation.
 
 Important:
 Final admission depends on official CAP rounds, seat availability, category reservation rules, and CET Cell updates.`,
-        },
-        {
-          role: "system",
-          content: `AdmissionOS data context:\n${predictionContext}`,
-        },
-        ...convertMessages(messages),
-        {
-          role: "user",
-          content: message,
-        },
-      ],
-    });
+          },
+
+          {
+            role: "system",
+            content: `AdmissionOS student and prediction context:
+
+${predictionContext}`,
+          },
+
+          ...convertMessages(messages),
+
+          {
+            role: "user",
+            content: message,
+          },
+        ],
+      });
 
     const answer =
       response.choices[0]?.message?.content?.trim() ||
@@ -127,12 +152,15 @@ Final admission depends on official CAP rounds, seat availability, category rese
     return NextResponse.json({
       answer,
       usedData: true,
+      mode: "openai",
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error: unknown) {
+    console.error("AI Counselor error:", error);
 
     return NextResponse.json(
-      { error: "Failed to answer question." },
+      {
+        error: "Failed to answer question.",
+      },
       { status: 500 }
     );
   }
