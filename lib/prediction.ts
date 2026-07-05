@@ -403,19 +403,33 @@ export function predictColleges(input: PredictionInput): PredictionResult[] {
   }
 
   results.sort((a, b) => {
-    if (b.qualityScore !== a.qualityScore) {
-      return b.qualityScore - a.qualityScore;
-    }
+  const collegeA = colleges.find((c) => c.id === a.collegeId);
+  const collegeB = colleges.find((c) => c.id === b.collegeId);
 
-    if (b.averagePackage !== a.averagePackage) {
-      return b.averagePackage - a.averagePackage;
-    }
+  const reputationA = collegeA ? getManualCollegeScore(collegeA) : 0;
+  const reputationB = collegeB ? getManualCollegeScore(collegeB) : 0;
 
-    return (
-      Math.abs(input.percentage - a.previousCutoff) -
-      Math.abs(input.percentage - b.previousCutoff)
-    );
-  });
+  // 1. Real college reputation priority
+  if (reputationA !== reputationB) {
+    return reputationB - reputationA;
+  }
+
+  // 2. Overall quality score
+  if (b.qualityScore !== a.qualityScore) {
+    return b.qualityScore - a.qualityScore;
+  }
+
+  // 3. Better average package
+  if (b.averagePackage !== a.averagePackage) {
+    return b.averagePackage - a.averagePackage;
+  }
+
+  // 4. Closest cutoff to student's percentage
+  return (
+    Math.abs(input.percentage - a.previousCutoff) -
+    Math.abs(input.percentage - b.previousCutoff)
+  );
+});
 
   const collegeRankMap = new Map<string, number>();
   let nextRank = 1;
