@@ -1,4 +1,5 @@
 import "server-only";
+
 import {
   getColleges,
   getCutoff,
@@ -22,7 +23,118 @@ const BRANCH_DEMAND_ADJUSTMENT: Record<string, number> = {
   low: 0.2,
 };
 
-const MUMBAI_REGION = ["mumbai", "navi-mumbai", "kharghar-navi-mumbai"];
+const PUNE_REGION = [
+  "pune",
+  "coep",
+  "bibwewadi",
+  "pimpri",
+  "chinchwad",
+  "pimpri chinchwad",
+  "akurdi",
+  "ravet",
+  "tathawade",
+  "hinjawadi",
+  "wagholi",
+  "hadapsar",
+  "narhe",
+  "karvenagar",
+  "alandi",
+  "talegaon",
+];
+
+const MUMBAI_REGION = [
+  "mumbai",
+  "veermata",
+  "vjti",
+  "matunga",
+  "andheri",
+  "bandra",
+  "vile parle",
+  "chembur",
+  "sion",
+  "wadala",
+  "kandivali",
+  "byculla",
+  "navi mumbai",
+  "navi-mumbai",
+  "kharghar",
+  "thane",
+  "panvel",
+  "kalyan",
+  "dombivli",
+  "vasai",
+  "virar",
+  "airoli",
+  "nerul",
+  "vashi",
+];
+
+const COLLEGE_REPUTATION_SCORE: Record<string, number> = {
+  // Mumbai / top state colleges
+  "3012": 100, // VJTI
+  "3014": 98, // SPCE
+  "3199": 96, // DJ Sanghvi
+  "3182": 94, // Thadomal Shahani
+  "3184": 92, // Fr. CRCE Bandra
+  "3185": 91, // VESIT
+  "3139": 88, // Vidyalankar
+  "3176": 86, // Thakur
+  "3197": 84, // Fr. C. Rodrigues Vashi
+  "3148": 82, // Shah & Anchor
+
+  // Pune / Western Maharashtra
+  "6006": 100, // COEP
+  "6271": 97, // PICT
+  "6273": 95, // VIT Pune
+  "6007": 94, // Walchand Sangli
+  "6272": 90, // D.Y. Patil Akurdi
+  "6822": 88, // PCCOER Ravet
+};
+
+const COLLEGE_NAME_BONUS: { pattern: RegExp; score: number }[] = [
+  { pattern: /coep|college of engineering pune/i, score: 100 },
+  { pattern: /veermata|vjti|jijabai technological/i, score: 100 },
+  { pattern: /pune institute of computer technology|pict/i, score: 97 },
+  { pattern: /vishwakarma institute of technology|vit.*pune/i, score: 95 },
+  { pattern: /walchand college of engineering/i, score: 94 },
+  { pattern: /dwarkadas.*sanghvi|d\.?\s*j\.?\s*sanghvi/i, score: 96 },
+  { pattern: /sardar patel college of engineering/i, score: 98 },
+  { pattern: /thadomal shahani/i, score: 94 },
+  { pattern: /fr\.?\s*conceicao|fr\.?\s*c\.?\s*rodrigues.*bandra/i, score: 92 },
+  { pattern: /vivekanand education.*technology|vesit/i, score: 91 },
+  { pattern: /vidyalankar/i, score: 88 },
+  { pattern: /thakur college of engineering/i, score: 86 },
+  { pattern: /pimpri chinchwad.*ravet|pccoer/i, score: 88 },
+  { pattern: /d\.?\s*y\.?\s*patil.*akurdi/i, score: 90 },
+];
+
+function normalizeText(value: string): string {
+  return value.toLowerCase().replaceAll("-", " ").replace(/\s+/g, " ").trim();
+}
+
+function collegeSearchText(college: College): string {
+  return normalizeText(
+    `${college.id} ${college.name} ${college.shortName} ${college.cityId} ${college.address}`
+  );
+}
+
+function isInRegion(college: College, region: string): boolean {
+  const text = collegeSearchText(college);
+
+  if (region === "pune") {
+    return PUNE_REGION.some((keyword) =>
+      text.includes(normalizeText(keyword))
+    );
+  }
+
+  if (region === "mumbai") {
+    return MUMBAI_REGION.some((keyword) =>
+      text.includes(normalizeText(keyword))
+    );
+  }
+
+  return text.includes(normalizeText(region));
+}
 
 function getBranchGroupIds(selectedBranch: string): string[] {
   const branches = getBranches();
@@ -72,7 +184,9 @@ function getBranchGroupIds(selectedBranch: string): string[] {
 
   if (selectedBranch.startsWith("group-")) {
     const matcher = groupMap[selectedBranch];
+
     if (!matcher) return [];
+
     return branches.filter((b) => matcher(b.name)).map((b) => b.id);
   }
 
@@ -104,28 +218,50 @@ function normalizeCategory(input: PredictionInput): string {
   return input.category;
 }
 
+function getManualCollegeScore(college: College): number {
+  const directScore = COLLEGE_REPUTATION_SCORE[college.id];
+
+  if (directScore) return directScore;
+
+  const text = `${college.name} ${college.shortName}`;
+
+  const matched = COLLEGE_NAME_BONUS.find((item) => item.pattern.test(text));
+
+  return matched?.score ?? 0;
+}
+
 function calculateCollegeQualityScore(
   college: College,
   previousCutoff: number,
   averagePackage: number,
   branchDemandTier: "high" | "medium" | "low"
 ): number {
+  const manualScore = getManualCollegeScore(college);
+
   let score = 0;
 
-  score += previousCutoff * 0.55;
+  // Reputation should dominate sorting.
+  if (manualScore > 0) {
+    score += manualScore * 10;
+  }
 
-  if (college.type === "Government") score += 12;
-  else if (college.type === "Autonomous") score += 9;
-  else score += 4;
+  // Cutoff still matters, but it should not push weaker colleges above COEP/VJTI/PICT.
+  score += previousCutoff * 1.4;
 
-  if (averagePackage > 0) score += Math.min(averagePackage, 20) * 1.2;
+  if (college.type === "Government") score += 40;
+  else if (college.type === "Autonomous") score += 32;
+  else score += 14;
 
-  if (branchDemandTier === "high") score += 8;
-  else if (branchDemandTier === "medium") score += 4;
-  else score += 1;
+  if (averagePackage > 0) {
+    score += Math.min(averagePackage, 25) * 8;
+  }
 
-  if (college.branchIds.length >= 7) score += 4;
-  else if (college.branchIds.length >= 5) score += 2;
+  if (branchDemandTier === "high") score += 35;
+  else if (branchDemandTier === "medium") score += 18;
+  else score += 5;
+
+  if (college.branchIds.length >= 7) score += 10;
+  else if (college.branchIds.length >= 5) score += 5;
 
   return Math.round(score * 100) / 100;
 }
@@ -153,6 +289,7 @@ export function calculateChance(
   previousCutoff: number
 ): ChanceLevel {
   const diff = studentPercentage - previousCutoff;
+
   if (diff >= 2) return "High";
   if (diff >= -2) return "Medium";
   return "Low";
@@ -184,17 +321,8 @@ export function predictColleges(input: PredictionInput): PredictionResult[] {
   for (const college of colleges) {
     if (college.status !== "active") continue;
 
-    if (input.city !== "any") {
-      if (input.city === "mumbai") {
-        if (
-          !MUMBAI_REGION.includes(college.cityId) &&
-          !college.name.toLowerCase().includes("mumbai")
-        ) {
-          continue;
-        }
-      } else if (college.cityId !== input.city) {
-        continue;
-      }
+    if (input.city !== "any" && !isInRegion(college, input.city)) {
+      continue;
     }
 
     if (input.collegeType !== "Any" && college.type !== input.collegeType) {
@@ -207,6 +335,7 @@ export function predictColleges(input: PredictionInput): PredictionResult[] {
 
     for (const branchId of branchIdsToCheck) {
       const branch = branches.find((b) => b.id === branchId);
+
       if (!branch) continue;
 
       const cutoff =
@@ -246,7 +375,7 @@ export function predictColleges(input: PredictionInput): PredictionResult[] {
         collegeName: college.name,
         shortName: college.shortName,
         cityId: college.cityId,
-        cityName: city?.name ?? college.cityId,
+        cityName: city?.name ?? college.address ?? college.cityId,
         branchId: branch.id,
         branchName: branch.name,
         branchCode: branch.code,
@@ -276,6 +405,10 @@ export function predictColleges(input: PredictionInput): PredictionResult[] {
   results.sort((a, b) => {
     if (b.qualityScore !== a.qualityScore) {
       return b.qualityScore - a.qualityScore;
+    }
+
+    if (b.averagePackage !== a.averagePackage) {
+      return b.averagePackage - a.averagePackage;
     }
 
     return (
