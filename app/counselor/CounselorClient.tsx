@@ -14,7 +14,7 @@ interface Message {
 const SUGGESTIONS = [
   "Which college is best for my marks?",
   "Should I choose CO or IT?",
-  "Is VIT Pune good for placement?",
+  "Which college has best package?",
   "Should I wait for next CAP round?",
   "Make my preference list",
 ];
@@ -28,7 +28,7 @@ export default function CounselorClient() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      text: "Hi, I'm your CAP counselor. Ask me about colleges, branches, or placements.",
+      text: "Hi, I'm your AdmissionOS AI Counselor. Ask me anything about colleges, branches, cutoffs, packages, CAP rounds, or preference list.",
     },
   ]);
 
@@ -46,31 +46,52 @@ export default function CounselorClient() {
   }, [messages, sending]);
 
   async function send(text: string) {
-    if (!text.trim() || sending) return;
+    const cleanText = text.trim();
 
-    setMessages((m) => [...m, { role: "user", text }]);
+    if (!cleanText || sending) return;
+
+    const nextMessages: Message[] = [
+      ...messages,
+      {
+        role: "user",
+        text: cleanText,
+      },
+    ];
+
+    setMessages(nextMessages);
     setInput("");
     setSending(true);
 
     try {
       const res = await fetch("/api/ai-counselor", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, lastPrediction }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: cleanText,
+          messages: nextMessages,
+          lastPrediction,
+        }),
       });
 
       const data = await res.json();
 
-      setMessages((m) => [
-        ...m,
-        { role: "assistant", text: data.answer ?? "Something went wrong." },
-      ]);
-    } catch {
-      setMessages((m) => [
-        ...m,
+      setMessages((currentMessages) => [
+        ...currentMessages,
         {
           role: "assistant",
-          text: "Something went wrong reaching the counselor. Try again.",
+          text:
+            data.answer ??
+            "I could not generate an answer right now. Please try again.",
+        },
+      ]);
+    } catch {
+      setMessages((currentMessages) => [
+        ...currentMessages,
+        {
+          role: "assistant",
+          text: "Something went wrong reaching the AI Counselor. Try again.",
         },
       ]);
     } finally {
@@ -138,8 +159,8 @@ export default function CounselorClient() {
 
         {sending && (
           <div className="flex justify-start">
-            <div className="rounded-[22px] rounded-bl-md bg-slate-100 px-4 py-3 text-[15px] font-bold text-slate-500">
-              Checking the data…
+            <div className="rounded-[22px] rounded-bl-md bg-slate-100 px-4 py-3">
+              <Loader />
             </div>
           </div>
         )}
@@ -152,8 +173,10 @@ export default function CounselorClient() {
           {SUGGESTIONS.map((s) => (
             <button
               key={s}
+              type="button"
               onClick={() => send(s)}
-              className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-[12px] font-bold text-slate-600 shadow-sm"
+              disabled={sending}
+              className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2 text-[12px] font-bold text-slate-600 shadow-sm disabled:opacity-50"
             >
               {s}
             </button>
@@ -172,12 +195,13 @@ export default function CounselorClient() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask about college, branch..."
-          className="h-12 flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-[15px] font-medium outline-none focus:border-teal-500"
+          disabled={sending}
+          className="h-12 flex-1 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-[15px] font-medium outline-none focus:border-teal-500 disabled:opacity-60"
         />
 
         <button
           type="submit"
-          disabled={sending}
+          disabled={sending || !input.trim()}
           className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-600 text-2xl font-black text-white shadow-lg shadow-teal-600/25 disabled:opacity-60"
         >
           ↑

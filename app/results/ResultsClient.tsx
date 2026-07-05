@@ -5,6 +5,7 @@ import Link from "next/link";
 import branchesData from "@/lib/data/branches.json";
 import ResultCard from "@/components/ResultCard";
 import CityInput from "@/components/CityInput";
+import Loader from "@/components/Loader";
 import type {
   PredictionInput,
   PredictionResult,
@@ -52,7 +53,9 @@ const CITY_REGIONS: Record<string, string[]> = {
 export default function ResultsClient() {
   const [input] = useState<PredictionInput | null>(() => {
     if (typeof window === "undefined") return null;
+
     const raw = sessionStorage.getItem("cgai_predict_input");
+
     return raw ? JSON.parse(raw) : null;
   });
 
@@ -73,15 +76,22 @@ export default function ResultsClient() {
 
     fetch("/api/predict-colleges", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(input),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.error) setError(data.error);
-        else setResults(data.results);
+        if (data.error) {
+          setError(data.error);
+        } else {
+          setResults(data.results);
+        }
       })
-      .catch(() => setError("Something went wrong while predicting colleges."));
+      .catch(() => {
+        setError("Something went wrong while predicting colleges.");
+      });
   }, [input]);
 
   const filtered = useMemo(() => {
@@ -89,25 +99,38 @@ export default function ResultsClient() {
 
     return results.filter((r) => {
       if (filters.city !== "any") {
-        const selectedCity = filters.city.toLowerCase().replaceAll("-", " ");
-        const regionCities = CITY_REGIONS[selectedCity];
-
-        const collegeText = `${r.cityId} ${(r as any).cityName ?? ""} ${r.collegeName}`
+        const selectedCity = filters.city
           .toLowerCase()
           .replaceAll("-", " ");
 
+        const regionCities = CITY_REGIONS[selectedCity];
+
+        const collegeText =
+          `${r.cityId} ${(r as any).cityName ?? ""} ${r.collegeName}`
+            .toLowerCase()
+            .replaceAll("-", " ");
+
         if (regionCities) {
           const matchesRegion = regionCities.some((city) =>
-            collegeText.includes(city.toLowerCase().replaceAll("-", " "))
+            collegeText.includes(
+              city.toLowerCase().replaceAll("-", " ")
+            )
           );
 
-          if (!matchesRegion) return false;
+          if (!matchesRegion) {
+            return false;
+          }
         } else {
-          if (!collegeText.includes(selectedCity)) return false;
+          if (!collegeText.includes(selectedCity)) {
+            return false;
+          }
         }
       }
 
-      if (filters.branch !== "any" && r.branchId !== filters.branch) {
+      if (
+        filters.branch !== "any" &&
+        r.branchId !== filters.branch
+      ) {
         return false;
       }
 
@@ -118,7 +141,10 @@ export default function ResultsClient() {
         return false;
       }
 
-      if (filters.chance !== "any" && r.chance !== filters.chance) {
+      if (
+        filters.chance !== "any" &&
+        r.chance !== filters.chance
+      ) {
         return false;
       }
 
@@ -129,7 +155,10 @@ export default function ResultsClient() {
   function toggleCompare(id: string, checked: boolean) {
     setCompareIds((prev) => {
       if (checked) {
-        if (prev.length >= 3) return prev;
+        if (prev.length >= 3) {
+          return prev;
+        }
+
         return [...prev, id];
       }
 
@@ -141,7 +170,10 @@ export default function ResultsClient() {
     return (
       <div className="px-5 py-14 text-center">
         <div className="rounded-[2rem] bg-white p-8 shadow-xl shadow-teal-950/10">
-          <p className="text-xl font-black text-slate-950">No search yet</p>
+          <p className="text-xl font-black text-slate-950">
+            No search yet
+          </p>
+
           <p className="mt-2 text-sm text-slate-500">
             Fill the predictor form first.
           </p>
@@ -161,7 +193,9 @@ export default function ResultsClient() {
     return (
       <div className="px-5 py-14 text-center">
         <div className="rounded-[2rem] bg-white p-8 shadow-xl">
-          <p className="text-sm font-bold text-red-500">{error}</p>
+          <p className="text-sm font-bold text-red-500">
+            {error}
+          </p>
 
           <Link
             href="/"
@@ -170,6 +204,20 @@ export default function ResultsClient() {
             Back to predictor
           </Link>
         </div>
+      </div>
+    );
+  }
+
+  /*
+   * NEW GLOBAL LOADER
+   *
+   * While prediction API is loading,
+   * show only your custom loader.
+   */
+  if (results === null) {
+    return (
+      <div className="flex min-h-[70vh] items-center justify-center px-5">
+        <Loader />
       </div>
     );
   }
@@ -186,25 +234,31 @@ export default function ResultsClient() {
         </h1>
 
         <p className="mt-2 text-sm text-slate-500">
-          {results === null
-            ? "Crunching official cutoff data..."
-            : `${filtered.length} matching options found`}
+          {filtered.length} matching options found
         </p>
 
         <div className="mt-4 grid grid-cols-3 gap-3">
           <MiniStat
             label="High"
-            value={results?.filter((r) => r.chance === "High").length ?? "-"}
+            value={
+              results.filter((r) => r.chance === "High").length
+            }
             tone="green"
           />
+
           <MiniStat
             label="Target"
-            value={results?.filter((r) => r.chance === "Medium").length ?? "-"}
+            value={
+              results.filter((r) => r.chance === "Medium").length
+            }
             tone="amber"
           />
+
           <MiniStat
             label="Dream"
-            value={results?.filter((r) => r.chance === "Low").length ?? "-"}
+            value={
+              results.filter((r) => r.chance === "Low").length
+            }
             tone="red"
           />
         </div>
@@ -228,7 +282,9 @@ export default function ResultsClient() {
 
       {compareIds.length >= 2 && (
         <Link
-          href={`/compare?ids=${compareIds.join(",")}&category=${input.category}`}
+          href={`/compare?ids=${compareIds.join(
+            ","
+          )}&category=${input.category}`}
           className="block rounded-2xl bg-teal-600 px-4 py-3 text-center text-sm font-black text-white"
         >
           Compare {compareIds.length} colleges
@@ -236,18 +292,11 @@ export default function ResultsClient() {
       )}
 
       <section className="space-y-4">
-        {results === null && (
-          <div className="rounded-[2rem] bg-white p-8 text-center shadow-xl">
-            <p className="text-sm font-bold text-slate-500">
-              Crunching cutoff data…
-            </p>
-          </div>
-        )}
-
-        {results !== null && filtered.length === 0 && (
+        {filtered.length === 0 && (
           <div className="rounded-[2rem] bg-white p-8 text-center shadow-xl">
             <p className="text-sm text-slate-500">
-              No colleges match these filters. Try widening your filters.
+              No colleges match these filters. Try widening your
+              filters.
             </p>
           </div>
         )}
@@ -258,9 +307,12 @@ export default function ResultsClient() {
             result={r}
             selected={compareIds.includes(r.collegeId)}
             compareDisabled={
-              !compareIds.includes(r.collegeId) && compareIds.length >= 3
+              !compareIds.includes(r.collegeId) &&
+              compareIds.length >= 3
             }
-            onToggleCompare={(checked) => toggleCompare(r.collegeId, checked)}
+            onToggleCompare={(checked) =>
+              toggleCompare(r.collegeId, checked)
+            }
           />
         ))}
       </section>
@@ -269,7 +321,9 @@ export default function ResultsClient() {
         <div className="fixed inset-0 z-[60] flex items-end justify-center bg-black/40">
           <div className="w-full max-w-[430px] rounded-t-[2rem] bg-white p-5 shadow-2xl">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-black text-slate-950">Filters</h2>
+              <h2 className="text-xl font-black text-slate-950">
+                Filters
+              </h2>
 
               <button
                 onClick={() => setShowFilters(false)}
@@ -287,7 +341,12 @@ export default function ResultsClient() {
 
                 <CityInput
                   value={filters.city}
-                  onChange={(v) => setFilters((f) => ({ ...f, city: v }))}
+                  onChange={(v) =>
+                    setFilters((f) => ({
+                      ...f,
+                      city: v,
+                    }))
+                  }
                   placeholder="Any city"
                 />
               </label>
@@ -295,9 +354,17 @@ export default function ResultsClient() {
               <FilterSelect
                 label="Branch"
                 value={filters.branch}
-                onChange={(v) => setFilters((f) => ({ ...f, branch: v }))}
+                onChange={(v) =>
+                  setFilters((f) => ({
+                    ...f,
+                    branch: v,
+                  }))
+                }
                 options={[
-                  { value: "any", label: "Any branch" },
+                  {
+                    value: "any",
+                    label: "Any branch",
+                  },
                   ...branchesData.map((b) => ({
                     value: b.id,
                     label: b.name,
@@ -309,13 +376,28 @@ export default function ResultsClient() {
                 label="College type"
                 value={filters.collegeType}
                 onChange={(v) =>
-                  setFilters((f) => ({ ...f, collegeType: v }))
+                  setFilters((f) => ({
+                    ...f,
+                    collegeType: v,
+                  }))
                 }
                 options={[
-                  { value: "Any", label: "Any" },
-                  { value: "Government", label: "Government" },
-                  { value: "Private", label: "Private" },
-                  { value: "Autonomous", label: "Autonomous" },
+                  {
+                    value: "Any",
+                    label: "Any",
+                  },
+                  {
+                    value: "Government",
+                    label: "Government",
+                  },
+                  {
+                    value: "Private",
+                    label: "Private",
+                  },
+                  {
+                    value: "Autonomous",
+                    label: "Autonomous",
+                  },
                 ]}
               />
 
@@ -329,10 +411,22 @@ export default function ResultsClient() {
                   }))
                 }
                 options={[
-                  { value: "any", label: "Any" },
-                  { value: "High", label: "High" },
-                  { value: "Medium", label: "Medium" },
-                  { value: "Low", label: "Low" },
+                  {
+                    value: "any",
+                    label: "Any",
+                  },
+                  {
+                    value: "High",
+                    label: "High",
+                  },
+                  {
+                    value: "Medium",
+                    label: "Medium",
+                  },
+                  {
+                    value: "Low",
+                    label: "Low",
+                  },
                 ]}
               />
 
@@ -366,9 +460,16 @@ function MiniStat({
   };
 
   return (
-    <div className={`rounded-2xl p-3 text-center ${styles[tone]}`}>
-      <p className="text-lg font-black">{value}</p>
-      <p className="mt-1 text-[11px] font-black uppercase">{label}</p>
+    <div
+      className={`rounded-2xl p-3 text-center ${styles[tone]}`}
+    >
+      <p className="text-lg font-black">
+        {value}
+      </p>
+
+      <p className="mt-1 text-[11px] font-black uppercase">
+        {label}
+      </p>
     </div>
   );
 }
@@ -382,7 +483,10 @@ function FilterSelect({
   label: string;
   value: string;
   onChange: (v: string) => void;
-  options: { value: string; label: string }[];
+  options: {
+    value: string;
+    label: string;
+  }[];
 }) {
   return (
     <label className="block">
@@ -396,7 +500,10 @@ function FilterSelect({
         className="mobileInput"
       >
         {options.map((o) => (
-          <option key={o.value} value={o.value}>
+          <option
+            key={o.value}
+            value={o.value}
+          >
             {o.label}
           </option>
         ))}

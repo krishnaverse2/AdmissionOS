@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import PredictorForm from "@/components/PredictorForm";
+import Loader from "@/components/Loader";
 
 const quickActions = [
   {
@@ -103,13 +104,7 @@ export default function Home() {
   if (!userName) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#F7FBFA]">
-        <div className="flex flex-col items-center">
-          <div className="h-11 w-11 animate-spin rounded-full border-4 border-teal-100 border-t-teal-600" />
-
-          <p className="mt-4 text-sm font-bold text-slate-500">
-            Loading AdmissionOS...
-          </p>
-        </div>
+        <Loader />
       </div>
     );
   }

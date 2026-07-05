@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import collegesData from "@/lib/data/colleges.json";
+import Loader from "@/components/Loader";
 
 interface CollegeItem {
   id: string;
@@ -38,6 +39,7 @@ export default function CompareClient() {
   const params = useSearchParams();
   const category = params.get("category") ?? "GOPEN";
 
+  const [mounted, setMounted] = useState(false);
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState<ComparisonRow[] | null>(null);
   const [recommendation, setRecommendation] = useState("");
@@ -54,6 +56,14 @@ export default function CompareClient() {
   });
 
   const colleges = collegesData as CollegeItem[];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const filteredColleges = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -154,31 +164,31 @@ export default function CompareClient() {
   }
 
   function toggle(id: string) {
-  let nextIds: string[] = [];
+    let nextIds: string[] = [];
 
-  setSelectedIds((prev) => {
-    if (prev.includes(id)) {
-      nextIds = prev.filter((collegeId) => collegeId !== id);
-    } else {
-      if (prev.length >= 3) {
-        nextIds = prev;
-        return prev;
+    setSelectedIds((prev) => {
+      if (prev.includes(id)) {
+        nextIds = prev.filter((collegeId) => collegeId !== id);
+      } else {
+        if (prev.length >= 3) {
+          nextIds = prev;
+          return prev;
+        }
+
+        nextIds = [...prev, id];
       }
 
-      nextIds = [...prev, id];
-    }
+      return nextIds;
+    });
 
-    return nextIds;
-  });
+    setTimeout(() => {
+      updateUrl(nextIds);
+    }, 0);
 
-  setTimeout(() => {
-    updateUrl(nextIds);
-  }, 0);
-
-  setRows(null);
-  setRecommendation("");
-  setError(null);
-}
+    setRows(null);
+    setRecommendation("");
+    setError(null);
+  }
 
   function clearAll() {
     setSelectedIds([]);
@@ -205,6 +215,14 @@ export default function CompareClient() {
     setRows(null);
     setRecommendation("");
     setError(null);
+  }
+
+  if (!mounted) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#F7FBFA]">
+        <Loader />
+      </div>
+    );
   }
 
   if (showComparison) {
@@ -270,7 +288,11 @@ export default function CompareClient() {
           </div>
         </section>
 
-        {loading && <ComparisonSkeleton count={selectedIds.length} />}
+        {loading && (
+          <div className="flex min-h-[320px] items-center justify-center">
+            <Loader />
+          </div>
+        )}
 
         {error && (
           <section className="mt-5 rounded-[26px] bg-red-50 p-4 ring-1 ring-red-100">
@@ -630,43 +652,6 @@ function MiniStat({
         {label}
       </p>
     </div>
-  );
-}
-
-function ComparisonSkeleton({
-  count,
-}: {
-  count: number;
-}) {
-  return (
-    <section className="mt-6 space-y-4">
-      <div className="h-7 w-48 animate-pulse rounded-xl bg-slate-200" />
-
-      {Array.from({ length: count }).map((_, index) => (
-        <div
-          key={index}
-          className="rounded-[28px] bg-white p-4 shadow-xl shadow-slate-200/60 ring-1 ring-slate-100"
-        >
-          <div className="flex gap-3">
-            <div className="h-14 w-14 animate-pulse rounded-2xl bg-slate-100" />
-
-            <div className="flex-1">
-              <div className="h-4 w-4/5 animate-pulse rounded-lg bg-slate-100" />
-              <div className="mt-2 h-3 w-2/5 animate-pulse rounded-lg bg-slate-100" />
-            </div>
-          </div>
-
-          <div className="mt-4 grid grid-cols-2 gap-3">
-            {Array.from({ length: 4 }).map((__, statIndex) => (
-              <div
-                key={statIndex}
-                className="h-16 animate-pulse rounded-2xl bg-slate-100"
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </section>
   );
 }
 
