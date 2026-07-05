@@ -62,6 +62,7 @@ const cities = [
 
 export default function Home() {
   const router = useRouter();
+  const scrollAreaRef = useRef<HTMLElement | null>(null);
   const predictorRef = useRef<HTMLElement | null>(null);
 
   const [userName, setUserName] = useState("");
@@ -79,9 +80,19 @@ export default function Home() {
   }, [router]);
 
   function scrollToPredictor() {
-    predictorRef.current?.scrollIntoView({
+    const scrollArea = scrollAreaRef.current;
+    const predictor = predictorRef.current;
+
+    if (!scrollArea || !predictor) return;
+
+    const top =
+      predictor.offsetTop -
+      scrollArea.offsetTop -
+      16;
+
+    scrollArea.scrollTo({
+      top: Math.max(0, top),
       behavior: "smooth",
-      block: "start",
     });
   }
 
@@ -89,9 +100,19 @@ export default function Home() {
     setSelectedCity(citySlug);
 
     setTimeout(() => {
-      predictorRef.current?.scrollIntoView({
+      const scrollArea = scrollAreaRef.current;
+      const predictor = predictorRef.current;
+
+      if (!scrollArea || !predictor) return;
+
+      const top =
+        predictor.offsetTop -
+        scrollArea.offsetTop -
+        16;
+
+      scrollArea.scrollTo({
+        top: Math.max(0, top),
         behavior: "smooth",
-        block: "start",
       });
     }, 100);
   }
@@ -103,16 +124,16 @@ export default function Home() {
 
   if (!userName) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#F7FBFA]">
+      <div className="flex h-screen items-center justify-center overflow-hidden bg-[#F7FBFA]">
         <Loader />
       </div>
     );
   }
 
   return (
-    <div className="h-screen overflow-hidden bg-[#F7FBFA]">
+    <div className="h-[100dvh] overflow-hidden bg-[#F7FBFA]">
       {/* =====================================================
-          FIXED / STICKY HEADER
+          FIXED HEADER
       ===================================================== */}
       <header className="fixed left-0 right-0 top-0 z-[100] border-b border-slate-200/70 bg-white/95 shadow-sm backdrop-blur-2xl">
         <div className="mx-auto flex h-[76px] w-full max-w-[430px] items-center justify-between px-5">
@@ -145,41 +166,53 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Header space */}
-      <div className="h-[76px]" />
+      {/* =====================================================
+          FIXED WELCOME AREA
+      ===================================================== */}
+      <div className="fixed left-0 right-0 top-[76px] z-[90] bg-[#F7FBFA] px-5 pb-4 pt-5">
+        <div className="mx-auto w-full max-w-[430px]">
+          <section className="home-fade-up relative min-h-[190px] overflow-hidden rounded-[32px] bg-white p-5 shadow-xl shadow-teal-950/[0.08] ring-1 ring-slate-100">
+            <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-teal-100/80 blur-2xl" />
 
-      <main className="mx-auto h-[calc(100vh-76px)] w-full max-w-[430px] overflow-y-auto px-5 pb-28 pt-5">
-        {/* =====================================================
-            WELCOME CARD
-        ===================================================== */}
-        <section className="home-fade-up relative mb-6 min-h-[190px] overflow-hidden rounded-[32px] bg-white p-5 shadow-xl shadow-teal-950/[0.08] ring-1 ring-slate-100">
-          <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-teal-100/80 blur-2xl" />
+            <div className="pointer-events-none absolute -bottom-16 left-10 h-32 w-32 rounded-full bg-emerald-100/60 blur-2xl" />
 
-          <div className="pointer-events-none absolute -bottom-16 left-10 h-32 w-32 rounded-full bg-emerald-100/60 blur-2xl" />
+            <div className="relative z-10 max-w-[64%]">
+              <div className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-3 py-1.5">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-teal-500" />
 
-          <div className="relative z-10 max-w-[64%]">
-            <div className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-3 py-1.5">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-teal-500" />
+                <p className="text-xs font-black text-teal-700">
+                  Welcome back
+                </p>
+              </div>
 
-              <p className="text-xs font-black text-teal-700">
-                Welcome back
+              <h2 className="mt-3 text-[27px] font-black leading-[1.08] text-slate-950">
+                Hi, {userName}! 👋
+              </h2>
+
+              <p className="mt-3 text-sm font-semibold leading-6 text-slate-500">
+                Find the best engineering college for your profile.
               </p>
             </div>
 
-            <h2 className="mt-3 text-[27px] font-black leading-[1.08] text-slate-950">
-              Hi, {userName}! 👋
-            </h2>
+            <div className="student-float absolute -right-3 bottom-2 text-[118px] leading-none">
+              🧑‍🎓
+            </div>
+          </section>
+        </div>
+      </div>
 
-            <p className="mt-3 text-sm font-semibold leading-6 text-slate-500">
-              Find the best engineering college for your profile.
-            </p>
-          </div>
-
-          <div className="student-float absolute -right-3 bottom-2 text-[118px] leading-none">
-            🧑‍🎓
-          </div>
-        </section>
-
+      {/* =====================================================
+          ONLY THIS AREA SCROLLS
+          76px header
+          + 5px top gap
+          + 190px welcome card
+          + 16px bottom padding
+          = starts around 286px
+      ===================================================== */}
+      <main
+        ref={scrollAreaRef}
+        className="fixed bottom-0 left-1/2 top-[286px] w-full max-w-[430px] -translate-x-1/2 overflow-y-auto overscroll-contain px-5 pb-28 pt-4"
+      >
         {/* =====================================================
             PREDICTOR HERO
         ===================================================== */}
@@ -222,7 +255,7 @@ export default function Home() {
         </section>
 
         {/* =====================================================
-            QUICK ACTIONS - ONLY TAB LINKS
+            QUICK ACTIONS
         ===================================================== */}
         <section className="home-fade-up home-delay-2 mb-8">
           <div className="mb-5 flex items-center justify-between">
@@ -261,7 +294,6 @@ export default function Home() {
 
         {/* =====================================================
             TOP CITIES
-            CLICK => SELECT CITY + OPEN PREDICTION FORM
         ===================================================== */}
         <section className="home-fade-up home-delay-3 mb-8">
           <div className="mb-5 flex items-center justify-between">
@@ -373,7 +405,7 @@ export default function Home() {
         <section
           ref={predictorRef}
           id="predictor"
-          className="home-fade-up home-delay-5 scroll-mt-[96px]"
+          className="home-fade-up home-delay-5"
         >
           <div className="mb-5">
             <div className="flex items-center justify-between gap-3">
@@ -399,7 +431,10 @@ export default function Home() {
             </p>
           </div>
 
-          <PredictorForm key={selectedCity} initialCity={selectedCity} />
+          <PredictorForm
+            key={selectedCity}
+            initialCity={selectedCity}
+          />
         </section>
       </main>
 
@@ -407,8 +442,11 @@ export default function Home() {
           ANIMATIONS
       ===================================================== */}
       <style jsx global>{`
-        html {
-          scroll-behavior: smooth;
+        html,
+        body {
+          height: 100%;
+          overflow: hidden;
+          overscroll-behavior: none;
         }
 
         @keyframes homeFadeUp {
